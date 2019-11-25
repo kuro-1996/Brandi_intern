@@ -82,3 +82,13 @@
   font-family: 'roboto-bold';
   src: url('#{$fa-font-path}/Roboto-Bold.ttf') format('truetype');
 }
+
+@font-face{
+  font-family: 'opensans-extrabold';
+  src: url('#{$fa-font-path}/OpenSans-ExtraBold.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'opensans-semibold';
+  src: url('#{$fa-font-path}/OpenSans-SemiBold.ttf') format('truetype');
+}

@@ -7460,6 +7460,16 @@ readers do not read off random characters that represent icons */
   src: url("../fonts/Roboto-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'opensans-extrabold';
+  src: url("../fonts/OpenSans-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'opensans-semibold';
+  src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+
 html, body {
   font-size: 16px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -7621,6 +7631,105 @@ header .nav-bar .nav-bar_menu .active::before {
   background: #32b0ee;
 }
 
+.features {
+  background: #f4f7f9;
+  /*features-header*/
+  /*features-page*/
+}
+
+.features .features-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 70px;
+  position: relative;
+}
+
+.features .features-header::after, .features .features-header::before {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background: #c3c6c7;
+  position: absolute;
+  bottom: 6px;
+}
+
+.features .features-header::after {
+  left: calc(50% + 23px);
+}
+
+.features .features-header::before {
+  right: calc(50% + 23px);
+}
+
+.features .features-header h2 {
+  font-family: "opensans-extrabold";
+  font-size: 28px;
+  color: #0eb493;
+  margin-bottom: 19px;
+}
+
+.features .features-header i {
+  color: #c3c6c7;
+}
+
+.features #features-page {
+  padding: 64px 0 136px 0;
+}
+
+.features #features-page ol {
+  bottom: 54px;
+}
+
+.features #features-page ol .active {
+  background: #062033;
+}
+
+.features #features-page ol li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: none;
+  border: 1px solid #c3c6c7;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  .features .wrapper_item {
+    margin-bottom: 30px;
+  }
+  .features .wrapper_item:last-child {
+    margin: 0;
+  }
+}
+
+.features .wrapper_item .item_img {
+  float: left;
+  height: 100%;
+}
+
+.features .wrapper_item .item_content {
+  font-family: "opensans";
+  font-size: 13px;
+  color: #7a8993;
+  padding-left: 52px;
+}
+
+.features .wrapper_item .item_content h3 {
+  font-family: "opensans-semibold";
+  font-size: 20px;
+  color: #062033;
+  margin-bottom: 18px;
+}
+
+/*****features*********/
 footer {
   background: #1ea78d;
 }
