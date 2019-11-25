@@ -39,3 +39,13 @@ button{
 input{
   outline: none;
 }
+
+.change{
+  background-color: #0eb493;
+}
+
+.active.fix{
+  &:hover{
+    color: #062033;
+  }
+}

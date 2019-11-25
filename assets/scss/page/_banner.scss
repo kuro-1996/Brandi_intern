@@ -32,14 +32,14 @@
       font-family: "opensans-light";
     }
     h2 {
-      font-size: 62px;
+      @include font-size(62px);
       span {
         font-family: "opensans-bold";
         padding-left: 17px;
       }
     }
     h3 {
-      font-size: 48px;
+      @include font-size(48px);
       margin-bottom: 18px;
       span {
         color: #0ed691;
@@ -47,7 +47,7 @@
       }
     }
     p {
-      font-size: 18px;
+      @include font-size(18px);
       display: flex;
       align-items: center;
       margin-bottom: 105px;

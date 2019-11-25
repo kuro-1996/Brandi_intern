@@ -7538,12 +7538,22 @@ input {
   outline: none;
 }
 
+.change {
+  background-color: #0eb493;
+}
+
+.active.fix:hover {
+  color: #062033;
+}
+
 header {
   background: rgba(16, 22, 54, 0.3);
   position: fixed;
   width: 100%;
   height: 70px;
   z-index: 20;
+  -webkit-transition: background-color 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
 }
 
 header .container {
@@ -7758,6 +7768,7 @@ footer .footer-wrap .col-12:last-child {
 footer .wrap_comp {
   font-family: "myriad-pro";
   font-size: 13px;
+  font-size: 0.8125rem;
   color: #ffffff;
   padding-right: 40px;
   word-spacing: 1px;
@@ -7821,6 +7832,7 @@ footer .wrap_search {
 footer .wrap_search h6 {
   font-family: "roboto-bold";
   font-size: 14px;
+  font-size: 0.875rem;
   color: #d7d5d0;
   margin-bottom: 43px;
 }
@@ -7835,6 +7847,7 @@ footer .wrap_search p {
   font-family: "myriad-pro";
   color: #ffffff;
   font-size: 13px;
+  font-size: 0.8125rem;
   word-spacing: 1px;
   padding-right: 20px;
 }
@@ -7866,12 +7879,14 @@ footer .wrap_search .search_area input {
   font-family: "myriad-pro";
   color: #ffffff;
   font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 footer .wrap_search .search_area .fa {
   border: none;
   background: none;
   font-size: 20px;
+  font-size: 1.25rem;
   color: #ffffff;
   opacity: 0.6;
   padding-right: 17px;
@@ -7910,6 +7925,7 @@ footer .wrap_link {
 footer .wrap_link h6 {
   font-family: "roboto-bold";
   font-size: 14px;
+  font-size: 0.875rem;
   color: #d7d5d0;
   margin-bottom: 36px;
 }
@@ -7930,6 +7946,7 @@ footer .wrap_link .link_col a {
   display: block;
   font-family: "opensans";
   font-size: 13px;
+  font-size: 0.8125rem;
   margin-bottom: 13px;
 }
 
@@ -7948,6 +7965,7 @@ footer .wrap_link .col_left {
 footer .wrap_info {
   font-family: "opensans";
   font-size: 13px;
+  font-size: 0.8125rem;
   padding: 67px 0 0 29px;
   color: #062033;
 }
@@ -8062,6 +8080,7 @@ footer .wrap_info .info_author span a {
 
 .banner .carousel-item_content h2 {
   font-size: 62px;
+  font-size: 3.875rem;
 }
 
 .banner .carousel-item_content h2 span {
@@ -8071,6 +8090,7 @@ footer .wrap_info .info_author span a {
 
 .banner .carousel-item_content h3 {
   font-size: 48px;
+  font-size: 3rem;
   margin-bottom: 18px;
 }
 
@@ -8081,6 +8101,7 @@ footer .wrap_info .info_author span a {
 
 .banner .carousel-item_content p {
   font-size: 18px;
+  font-size: 1.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

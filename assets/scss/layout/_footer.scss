@@ -20,7 +20,7 @@ footer {
 
   .wrap_comp {
     font-family: "myriad-pro";
-    font-size: 13px;
+    @include font-size(13px);
     color: #ffffff;
     padding-right: 40px;
     word-spacing: 1px;
@@ -53,7 +53,7 @@ footer {
     }
     h6 {
       font-family: "roboto-bold";
-      font-size: 14px;
+      @include font-size(14px);
       color: #d7d5d0;
       margin-bottom: 43px;
       @media #{$info-phone}{
@@ -63,7 +63,7 @@ footer {
     p {
       font-family: "myriad-pro";
       color: #ffffff;
-      font-size: 13px;
+      @include font-size(13px);
       word-spacing: 1px;
       padding-right: 20px;
       @media #{$info-phone} {
@@ -84,12 +84,12 @@ footer {
         padding-left: 15px;
         font-family: "myriad-pro";
         color: #ffffff;
-        font-size: 13px;
+        @include font-size(13px);
       }
       .fa {
         border: none;
         background: none;
-        font-size: 20px;
+        @include font-size(20px);
         color: #ffffff;
         opacity: 0.6;
         padding-right: 17px;
@@ -112,7 +112,7 @@ footer {
     }
     h6 {
       font-family: "roboto-bold";
-      font-size: 14px;
+      @include font-size(14px);
       color: #d7d5d0;
       margin-bottom: 36px;
       @media #{$info-phone}{
@@ -124,7 +124,7 @@ footer {
       a {
         display: block;
         font-family: "opensans";
-        font-size: 13px;
+        @include font-size(13px);
         margin-bottom: 13px;
         &:last-child {
           margin: 0;
@@ -140,7 +140,7 @@ footer {
   }
   .wrap_info {
     font-family: "opensans";
-    font-size: 13px;
+    @include font-size(13px);
     padding: 67px 0 0 29px;
     color: #062033;
     @media #{$info-tablet-vertical} {
