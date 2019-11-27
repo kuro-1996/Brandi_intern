@@ -9,11 +9,15 @@ $(function () {
     var banner = $('.banner');
     var header = $('header');
     var anchor = $('.nav-bar_menu').children();
-    pos = banner.offset();
+    var para = $('.nav-bar_brand p');
+        pos = banner.offset();
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > pos.top + banner.height() - 70) {
             $(header).addClass('change');
+            $(para).css('opacity','1');
+            $(para).addClass('fix');
+            $(anchor).addClass('fix');
             $(anchor).hover(function(){
                 $(this).css('color','#062033');
             },
@@ -22,6 +26,9 @@ $(function () {
             });
         } else if ($(this).scrollTop() <= pos.top + banner.height() - 70 && header.hasClass('change')) {
             $(header).removeClass('change');
+            $(para).css('opacity','0.3');
+            $(para).removeClass('fix');
+            $(anchor).removeClass('fix');
             $(anchor).hover(function(){
                 $(this).css('color','#32b0ee');
             },

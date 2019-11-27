@@ -23,7 +23,6 @@ img {
   max-width: 100%;
 }
 
-
 .container{
   @media only screen and (min-width : 1200px){
     max-width: 1200px;
@@ -41,11 +40,5 @@ input{
 }
 
 .change{
-  background-color: #0eb493;
-}
-
-.active.fix{
-  &:hover{
-    color: #062033;
-  }
+  background-color: #1ea78d;
 }

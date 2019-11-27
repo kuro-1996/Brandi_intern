@@ -1,11 +1,10 @@
 header {
-  background: rgba($color: #101636, $alpha: 0.3);
+  @include background-opacity(#101636,0.2);
   position: fixed;
   width: 100%;
   height: 70px;
   z-index: 20;
   transition: background-color 500ms ease-in-out;
-  
   .container {
     height: 100%;
   }
@@ -17,35 +16,51 @@ header {
     .nav-bar_brand {
       display: flex;
       align-items: center;
-      position: relative;
-      &::before {
-        content: "";
-        height: 17px;
-        width: 1px;
-        background: #154458;
-        position: absolute;
-        left: 118px;
-        top: 32px;
-      }
       p {
-        font-family: "opensans-light";
-        color: #50565e;
+        position: relative;
+        color: rgba(#ffffff,.3);
         padding-top: 10px;
+        font-weight: 300;
+        &.fix::before{
+          background: #000000;
+        }
+        &::before {
+          content: "";
+          height: 17px;
+          width: 1px;
+          background: rgba(#2d9cd3,.3);
+          position: absolute;
+          left: -21px;
+          bottom: 1px;
+        }
+        
       }
       a {
-        padding: 2px 50px 0 0;
+        padding-top: 2px;
+        margin-right: 50px;
       }
     }
     .nav-bar_menu {
       display: flex;
       list-style: none;
-      font-family: "opensans";
       a {
         padding: 31px 4px 0 4px;
-        margin-left: 13px;
+        margin-left: 26px;
         position: relative;
         &:first-child {
           margin: 0;
+        }
+        &.fix{
+          &.active{
+            &::before{
+              background: #000000;
+            }
+          }
+          &:hover {
+            &::before {
+              background: #000000;
+            }
+          }
         }
         &::before {
           content: "";

@@ -58,37 +58,3 @@
   font-weight: 900;
 }
 
-@font-face{
-  font-family: 'opensans';
-  src: url('#{$fa-font-path}/OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face{
-  font-family: 'opensans-light';
-  src: url('#{$fa-font-path}/OpenSans-Light.ttf') format('truetype');
-}
-
-@font-face{
-  font-family: 'opensans-bold';
-  src: url('#{$fa-font-path}/OpenSans-Bold.ttf') format('truetype');
-}
-
-@font-face{
-  font-family: 'myriad-pro';
-  src: url('#{$fa-font-path}/Myriad Pro Regular.ttf') format('truetype');
-}
-
-@font-face{
-  font-family: 'roboto-bold';
-  src: url('#{$fa-font-path}/Roboto-Bold.ttf') format('truetype');
-}
-
-@font-face{
-  font-family: 'opensans-extrabold';
-  src: url('#{$fa-font-path}/OpenSans-ExtraBold.ttf') format('truetype');
-}
-
-@font-face{
-  font-family: 'opensans-semibold';
-  src: url('#{$fa-font-path}/OpenSans-SemiBold.ttf') format('truetype');
-}

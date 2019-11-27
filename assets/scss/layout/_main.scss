@@ -1,5 +1,6 @@
 .features {
   background: #f4f7f9;
+  line-height: 1.7;
   .features-header {
     display: flex;
     flex-flow: column;
@@ -22,7 +23,7 @@
       @include calc(right, "50% + 23px");
     }
     h2 {
-      font-family: "opensans-extrabold";
+      font-weight: 800;
       font-size: 28px;
       color: #0eb493;
       margin-bottom: 19px;
@@ -60,15 +61,14 @@
       height: 100%;
     }
     .item_content {
-      font-family: "opensans";
       font-size: 13px;
       color: #7a8993;
       padding-left: 52px;
       h3 {
-        font-family: "opensans-semibold";
+        font-weight: 600;
         font-size: 20px;
         color: #062033;
-        margin-bottom: 18px;
+        margin-bottom: 16px;
       }
     }
   }
