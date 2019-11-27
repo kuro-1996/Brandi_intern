@@ -21,6 +21,9 @@ header {
         color: rgba(#ffffff,.3);
         padding-top: 10px;
         font-weight: 300;
+        &.fix{
+          color: #ffffff;
+        }
         &.fix::before{
           background: #000000;
         }
@@ -33,7 +36,6 @@ header {
           left: -21px;
           bottom: 1px;
         }
-        
       }
       a {
         padding-top: 2px;

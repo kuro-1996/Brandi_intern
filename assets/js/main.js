@@ -26,7 +26,6 @@ $(function () {
             });
         } else if ($(this).scrollTop() <= pos.top + banner.height() - 70 && header.hasClass('change')) {
             $(header).removeClass('change');
-            $(para).css('opacity','0.3');
             $(para).removeClass('fix');
             $(anchor).removeClass('fix');
             $(anchor).hover(function(){

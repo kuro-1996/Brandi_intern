@@ -7550,6 +7550,10 @@ header .nav-bar .nav-bar_brand p {
   font-weight: 300;
 }
 
+header .nav-bar .nav-bar_brand p.fix {
+  color: #ffffff;
+}
+
 header .nav-bar .nav-bar_brand p.fix::before {
   background: #000000;
 }
