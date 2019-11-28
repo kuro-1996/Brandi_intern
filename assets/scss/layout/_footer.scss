@@ -101,7 +101,7 @@ footer {
   }
   .wrap_link {
     padding: 14px 6px 0 19px;
-    @media (min-width: 992px){
+    @media screen and (min-width: 992px) and (max-width: 1200px){
       padding-left: 6px;
     }
     @media #{$info-tablet-vertical} {
@@ -144,7 +144,7 @@ footer {
     @include font-size(13px);
     padding: 65px 0 0 38px;
     color: #062033;
-    @media (min-width: 992px){
+    @media screen and (min-width: 992px) and (max-width: 1200px){
       padding-left: 28px;
     }
     @media #{$info-tablet-vertical} {

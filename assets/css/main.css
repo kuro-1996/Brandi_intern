@@ -8038,7 +8038,7 @@ footer .wrap_link {
   padding: 14px 6px 0 19px;
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
   footer .wrap_link {
     padding-left: 6px;
   }
@@ -8112,7 +8112,7 @@ footer .wrap_info {
   color: #062033;
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
   footer .wrap_info {
     padding-left: 28px;
   }
