@@ -24,7 +24,9 @@ footer {
     color: #ffffff;
     padding-right: 10px;
     word-spacing: 1px;
-
+    @media #{$info-tablet-vertical}{
+      padding-right: 30px;
+    }
     @media #{$info-phone} {
       display: flex;
       flex-flow: column;
@@ -46,7 +48,7 @@ footer {
       padding: 0;
     }
     @media #{$info-tablet-vertical} {
-      padding-top: 0;
+      padding: 0 12px 0 30px;
     }
     h6 {
       font-weight: 700;
@@ -54,7 +56,7 @@ footer {
       color: #d7d5d0;
       margin-bottom: 44px;
       @media #{$info-phone} {
-        margin-bottom: 39px;
+        margin-bottom: 20px;
       }
     }
     p {
@@ -64,6 +66,7 @@ footer {
       padding-right: 20px;
       @media #{$info-phone} {
         padding-right: 0;
+        text-align: center;
       }
     }
     .search_area {
@@ -73,6 +76,9 @@ footer {
       justify-content: space-between;
       margin-bottom: 17px;
       @include border-radius(5px);
+      @media #{$info-phone}{
+        width: 80%;
+      }
       input {
         width: 100%;
         border: none;
@@ -95,8 +101,11 @@ footer {
   }
   .wrap_link {
     padding: 14px 6px 0 19px;
+    @media (min-width: 992px){
+      padding-left: 6px;
+    }
     @media #{$info-tablet-vertical} {
-      padding-left: 0;
+      padding: 14px 30px 0 0;
     }
     @media #{$info-phone} {
       display: flex;
@@ -110,7 +119,7 @@ footer {
       color: #d7d5d0;
       margin-bottom: 36px;
       @media #{$info-phone} {
-        margin-bottom: 39px;
+        margin-bottom: 20px;
       }
     }
     .link_col {
@@ -135,8 +144,11 @@ footer {
     @include font-size(13px);
     padding: 65px 0 0 38px;
     color: #062033;
+    @media (min-width: 992px){
+      padding-left: 28px;
+    }
     @media #{$info-tablet-vertical} {
-      padding-left: 0;
+      padding-left: 30px;
     }
     @media #{$info-phone} {
       display: flex;
@@ -147,8 +159,13 @@ footer {
     p {
       color: #ffffff;
       margin-bottom: 48px;
-
       position: relative;
+      @media #{$info-phone-4}{
+        text-align: center;
+      }
+      @media #{$info-phone}{
+        margin-bottom: 25px;
+      }
       &::before {
         content: "";
         height: 39px;
@@ -159,6 +176,7 @@ footer {
         bottom: 4px;
         @media #{$info-tablet-vertical} {
           left: -13px;
+          bottom: 0;
         }
         @media #{$info-phone} {
           display: none;

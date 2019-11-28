@@ -8,7 +8,17 @@
     margin:0;
     bottom: 373px;
     right: 48px;
-    
+    @media #{$info-phone-4}{
+      bottom: 48px;
+      right: 24px;
+      height: 36px;
+    }
+    @media only screen and (min-width: 501px) and (max-width : 767px){
+      bottom: 48px;
+    }
+    @media #{$info-tablet-vertical} and (min-width: 768px){
+      bottom: 250px;
+    }
     li{
       width: 8px;
       height: 8px;
@@ -23,6 +33,15 @@
   }
   .carousel-item_content {
     padding: 450px 0 50px 0;
+    @media #{$info-tablet-vertical}{
+      padding-top: 350px;
+    }
+    @media #{$info-phone}{
+      padding-top: 250px;
+    }
+    @media #{$info-phone-4}{
+      padding-top: 200px;
+    }
     h2,
     h3,
     p {
@@ -33,17 +52,29 @@
     }
     h2 {
       @include font-size(62px);
+      @media #{$info-phone-4}{
+        @include font-size(42px);
+      }
       span {
         font-weight: 700;
         padding-left: 17px;
+        @media #{$info-phone-4}{
+          padding-left: 9px;
+        }
       }
     }
     h3 {
       @include font-size(48px);
       margin-bottom: 18px;
+      @media #{$info-phone-4}{
+        @include font-size(28px);
+      }
       span {
         color: #0ed691;
         padding-right: 11px;
+        @media #{$info-phone-4}{
+          padding-right: 6px;
+        }
       }
     }
     p {
@@ -51,6 +82,9 @@
       display: flex;
       align-items: center;
       margin-bottom: 105px;
+      @media #{$info-phone-4}{
+        @include font-size(15px);
+      }
       &::before,
       &::after {
         content: "";
@@ -60,9 +94,15 @@
       }
       &::before {
         margin-right: 32px;
+        @media #{$info-phone-4}{
+          margin-right: 16px;
+        }
       }
       &:after {
         margin-left: 32px;
+        @media #{$info-phone-4}{
+          margin-left: 16px;
+        }
       }
     }
   }
