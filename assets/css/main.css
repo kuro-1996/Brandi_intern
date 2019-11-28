@@ -7856,8 +7856,7 @@ footer .wrap_search .search_area .fa {
   background: none;
   font-size: 20px;
   font-size: 1.25rem;
-  color: #ffffff;
-  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.6);
   padding-right: 17px;
 }
 
@@ -7959,16 +7958,13 @@ footer .wrap_info {
   }
 }
 
-footer .wrap_info .info_author {
+footer .wrap_info p {
   color: #ffffff;
   margin-bottom: 48px;
-}
-
-footer .wrap_info .info_author p {
   position: relative;
 }
 
-footer .wrap_info .info_author p::before {
+footer .wrap_info p::before {
   content: "";
   height: 39px;
   width: 1px;
@@ -7979,24 +7975,24 @@ footer .wrap_info .info_author p::before {
 }
 
 @media only screen and (max-width: 992px) {
-  footer .wrap_info .info_author p::before {
+  footer .wrap_info p::before {
     left: -13px;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  footer .wrap_info .info_author p::before {
+  footer .wrap_info p::before {
     display: none;
   }
 }
 
-footer .wrap_info .info_author p .ti-heart {
+footer .wrap_info p .ti-heart {
   color: #177e72;
   padding: 0 14px 0 9px;
   font-weight: bold;
 }
 
-footer .wrap_info .info_author p span a {
+footer .wrap_info p span a {
   color: #062033;
   margin-left: 4px;
 }
@@ -8105,11 +8101,9 @@ footer .wrap_info .info_author p span a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #ffffff;
 }
 
 .banner .content_social a {
-  opacity: 0.3;
   padding-right: 18px;
   cursor: pointer;
 }
@@ -8126,11 +8120,12 @@ footer .wrap_info .info_author p span a {
   padding: 0;
 }
 
-.banner .content_social a:hover {
-  opacity: 1;
+.banner .content_social a:hover i {
+  color: #ffffff;
 }
 
 .banner .content_social a i {
   font-size: 19px;
+  color: rgba(255, 255, 255, 0.3);
 }
 /*# sourceMappingURL=main.css.map */

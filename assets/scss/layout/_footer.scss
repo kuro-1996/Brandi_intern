@@ -85,8 +85,7 @@ footer {
         border: none;
         background: none;
         @include font-size(20px);
-        color: #ffffff;
-        opacity: 0.6;
+        color: rgba(#ffffff, 0.6);
         padding-right: 17px;
         &:hover {
           color: #062033;
@@ -145,36 +144,35 @@ footer {
       align-items: center;
       padding: 0;
     }
-    .info_author {
+    p {
       color: #ffffff;
       margin-bottom: 48px;
-      p {
-        position: relative;
-        &::before {
-          content: "";
-          height: 39px;
-          width: 1px;
-          background: #177e72;
-          position: absolute;
-          left: -12px;
-          bottom: 4px;
-          @media #{$info-tablet-vertical} {
-            left: -13px;
-          }
-          @media #{$info-phone} {
-            display: none;
-          }
+
+      position: relative;
+      &::before {
+        content: "";
+        height: 39px;
+        width: 1px;
+        background: #177e72;
+        position: absolute;
+        left: -12px;
+        bottom: 4px;
+        @media #{$info-tablet-vertical} {
+          left: -13px;
         }
-        .ti-heart {
-          color: #177e72;
-          padding: 0 14px 0 9px;
-          font-weight: bold;
+        @media #{$info-phone} {
+          display: none;
         }
-        span {
-          a {
-            color: #062033;
-            margin-left: 4px;
-          }
+      }
+      .ti-heart {
+        color: #177e72;
+        padding: 0 14px 0 9px;
+        font-weight: bold;
+      }
+      span {
+        a {
+          color: #062033;
+          margin-left: 4px;
         }
       }
     }
