@@ -5,6 +5,30 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.slick-wrap').slick({
+        dots: true,
+        loop: true,
+        arrow: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+});
+
+$(document).ready(function () {
+    $('.features-content').slick({
+        dots: true,
+        loop: true,
+        infinite: true,
+        arrow: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+});
+
 $(function () {
     var banner = $('.banner');
     var header = $('header');

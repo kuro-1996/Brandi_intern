@@ -1,13 +1,26 @@
 .banner {
-  background: url("/assets/img/Bandi-banner.png");
-  .carousel-indicators{
+  background: url("../img/Bandi-banner.png");
+  .slick-dots{
     left: unset;
+    display: flex;
+    width: auto;
     flex-flow: column;
     height: 53px;
     justify-content: space-between;
     margin:0;
     bottom: 373px;
     right: 48px;
+    .slick-active {
+      background: #ffffff;
+    }
+    button {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      &::before {
+        display: none;
+      }
+    }
     @media #{$info-phone-4}{
       bottom: 48px;
       right: 24px;
@@ -24,14 +37,12 @@
       height: 8px;
       @include border-radius(50%);
       border: 1px solid #ccc;
-      cursor: pointer;
-      background: none;
-      &.active{
-        background: #ffffff;
-      }
     }
   }
-  .carousel-item_content {
+  .slick-dotted.slick-slider{
+    margin: 0;
+  }
+  .slick-item_content {
     padding: 450px 0 50px 0;
     @media #{$info-tablet-vertical}{
       padding-top: 350px;
@@ -114,9 +125,6 @@
       cursor: pointer;
       &:nth-child(3){
         padding-right: 12px;
-        i{
-          font-size: 18px;
-        }
       }
       &:last-child{
         padding:0;
@@ -127,7 +135,7 @@
         }
       }
       i{
-        font-size: 19px;
+        @include font-size(19px);
         color: rgba(#ffffff,.3);
       }
     }

@@ -7485,6 +7485,10 @@ img {
   max-width: 100%;
 }
 
+.slick-arrow {
+  display: none !important;
+}
+
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
@@ -7505,6 +7509,50 @@ input {
 
 .change {
   background-color: #1ea78d;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 70px;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.top::after, .top::before {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background: #c3c6c7;
+  position: absolute;
+  bottom: 6px;
+}
+
+.top::after {
+  left: calc(50% + 23px);
+}
+
+.top::before {
+  right: calc(50% + 23px);
+}
+
+.top h2 {
+  font-weight: 800;
+  font-size: 28px;
+  color: #0eb493;
+  margin-bottom: 19px;
+}
+
+.top i {
+  color: #c3c6c7;
 }
 
 header {
@@ -7778,100 +7826,69 @@ header .nav-bar .nav-bar_menu .active::before {
 
 .features {
   background: #f4f7f9;
-  line-height: 1.7;
-  /*features-header*/
-  /*features-page*/
 }
 
-.features .features-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 70px;
-  position: relative;
+.features .slick-dots {
+  padding-bottom: 45px;
+  position: unset;
 }
 
-.features .features-header::after, .features .features-header::before {
-  content: "";
-  width: 90px;
-  height: 1px;
-  background: #c3c6c7;
-  position: absolute;
-  bottom: 6px;
-}
-
-.features .features-header::after {
-  left: calc(50% + 23px);
-}
-
-.features .features-header::before {
-  right: calc(50% + 23px);
-}
-
-.features .features-header h2 {
-  font-weight: 800;
-  font-size: 28px;
-  color: #0eb493;
-  margin-bottom: 19px;
-}
-
-.features .features-header i {
-  color: #c3c6c7;
-}
-
-.features #features-page {
-  padding: 64px 0 136px 0;
-}
-
-.features #features-page ol {
-  bottom: 54px;
-}
-
-.features #features-page ol .active {
-  background: #062033;
-}
-
-.features #features-page ol li {
+.features .slick-dots li {
   width: 8px;
   height: 8px;
-  border-radius: 50%;
-  background: none;
   border: 1px solid #c3c6c7;
-  cursor: pointer;
+  border-radius: 50%;
+}
+
+.features .slick-dots li button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+}
+
+.features .slick-dots li button::before {
+  display: none;
+}
+
+.features .slick-dots .slick-active {
+  background: #000000;
+}
+
+.features .slick-track {
+  padding: 38px 0 62px 0;
+}
+
+.features .slick-dotted.slick-slider {
+  margin: 0;
 }
 
 @media only screen and (max-width: 992px) {
-  .features .wrapper_item {
+  .features .item-wrap {
     margin-bottom: 30px;
   }
-  .features .wrapper_item:last-child {
+  .features .item-wrap:last-child {
     margin: 0;
   }
 }
 
-.features .wrapper_item .item_img {
+.features .item-wrap .item_img {
   float: left;
   height: 100%;
 }
 
-.features .wrapper_item .item_content {
+.features .item-wrap .item_info {
   font-size: 13px;
+  font-size: 0.8125rem;
   color: #7a8993;
   padding-left: 52px;
 }
 
-.features .wrapper_item .item_content h3 {
+.features .item-wrap .item_info h3 {
   font-weight: 600;
   font-size: 20px;
+  font-size: 1.25rem;
   color: #062033;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 /*****features*********/
@@ -8193,11 +8210,15 @@ footer .wrap_info p span a {
 }
 
 .banner {
-  background: url("/assets/img/Bandi-banner.png");
+  background: url("../img/Bandi-banner.png");
 }
 
-.banner .carousel-indicators {
+.banner .slick-dots {
   left: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -8211,8 +8232,22 @@ footer .wrap_info p span a {
   right: 48px;
 }
 
+.banner .slick-dots .slick-active {
+  background: #ffffff;
+}
+
+.banner .slick-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+}
+
+.banner .slick-dots button::before {
+  display: none;
+}
+
 @media only screen and (max-width: 500px) {
-  .banner .carousel-indicators {
+  .banner .slick-dots {
     bottom: 48px;
     right: 24px;
     height: 36px;
@@ -8220,55 +8255,53 @@ footer .wrap_info p span a {
 }
 
 @media only screen and (min-width: 501px) and (max-width: 767px) {
-  .banner .carousel-indicators {
+  .banner .slick-dots {
     bottom: 48px;
   }
 }
 
 @media only screen and (max-width: 992px) and (min-width: 768px) {
-  .banner .carousel-indicators {
+  .banner .slick-dots {
     bottom: 250px;
   }
 }
 
-.banner .carousel-indicators li {
+.banner .slick-dots li {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   border: 1px solid #ccc;
-  cursor: pointer;
-  background: none;
 }
 
-.banner .carousel-indicators li.active {
-  background: #ffffff;
+.banner .slick-dotted.slick-slider {
+  margin: 0;
 }
 
-.banner .carousel-item_content {
+.banner .slick-item_content {
   padding: 450px 0 50px 0;
 }
 
 @media only screen and (max-width: 992px) {
-  .banner .carousel-item_content {
+  .banner .slick-item_content {
     padding-top: 350px;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .banner .carousel-item_content {
+  .banner .slick-item_content {
     padding-top: 250px;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .banner .carousel-item_content {
+  .banner .slick-item_content {
     padding-top: 200px;
   }
 }
 
-.banner .carousel-item_content h2,
-.banner .carousel-item_content h3,
-.banner .carousel-item_content p {
+.banner .slick-item_content h2,
+.banner .slick-item_content h3,
+.banner .slick-item_content p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8279,54 +8312,54 @@ footer .wrap_info p span a {
   font-weight: 300;
 }
 
-.banner .carousel-item_content h2 {
+.banner .slick-item_content h2 {
   font-size: 62px;
   font-size: 3.875rem;
 }
 
 @media only screen and (max-width: 500px) {
-  .banner .carousel-item_content h2 {
+  .banner .slick-item_content h2 {
     font-size: 42px;
     font-size: 2.625rem;
   }
 }
 
-.banner .carousel-item_content h2 span {
+.banner .slick-item_content h2 span {
   font-weight: 700;
   padding-left: 17px;
 }
 
 @media only screen and (max-width: 500px) {
-  .banner .carousel-item_content h2 span {
+  .banner .slick-item_content h2 span {
     padding-left: 9px;
   }
 }
 
-.banner .carousel-item_content h3 {
+.banner .slick-item_content h3 {
   font-size: 48px;
   font-size: 3rem;
   margin-bottom: 18px;
 }
 
 @media only screen and (max-width: 500px) {
-  .banner .carousel-item_content h3 {
+  .banner .slick-item_content h3 {
     font-size: 28px;
     font-size: 1.75rem;
   }
 }
 
-.banner .carousel-item_content h3 span {
+.banner .slick-item_content h3 span {
   color: #0ed691;
   padding-right: 11px;
 }
 
 @media only screen and (max-width: 500px) {
-  .banner .carousel-item_content h3 span {
+  .banner .slick-item_content h3 span {
     padding-right: 6px;
   }
 }
 
-.banner .carousel-item_content p {
+.banner .slick-item_content p {
   font-size: 18px;
   font-size: 1.125rem;
   display: -webkit-box;
@@ -8339,35 +8372,35 @@ footer .wrap_info p span a {
 }
 
 @media only screen and (max-width: 500px) {
-  .banner .carousel-item_content p {
+  .banner .slick-item_content p {
     font-size: 15px;
     font-size: 0.9375rem;
   }
 }
 
-.banner .carousel-item_content p::before, .banner .carousel-item_content p::after {
+.banner .slick-item_content p::before, .banner .slick-item_content p::after {
   content: "";
   width: 29px;
   height: 1px;
   background: #0ed691;
 }
 
-.banner .carousel-item_content p::before {
+.banner .slick-item_content p::before {
   margin-right: 32px;
 }
 
 @media only screen and (max-width: 500px) {
-  .banner .carousel-item_content p::before {
+  .banner .slick-item_content p::before {
     margin-right: 16px;
   }
 }
 
-.banner .carousel-item_content p:after {
+.banner .slick-item_content p:after {
   margin-left: 32px;
 }
 
 @media only screen and (max-width: 500px) {
-  .banner .carousel-item_content p:after {
+  .banner .slick-item_content p:after {
     margin-left: 16px;
   }
 }
@@ -8390,10 +8423,6 @@ footer .wrap_info p span a {
   padding-right: 12px;
 }
 
-.banner .content_social a:nth-child(3) i {
-  font-size: 18px;
-}
-
 .banner .content_social a:last-child {
   padding: 0;
 }
@@ -8404,6 +8433,7 @@ footer .wrap_info p span a {
 
 .banner .content_social a i {
   font-size: 19px;
+  font-size: 1.1875rem;
   color: rgba(255, 255, 255, 0.3);
 }
 /*# sourceMappingURL=main.css.map */
