@@ -4,12 +4,6 @@ footer {
   padding: 100px 0 122px 0;
   .footer-wrap {
     .col-12 {
-      &:first-child {
-        padding-left: 0;
-      }
-      &:last-child {
-        padding-right: 0;
-      }
       @media #{$info-phone} {
         margin-bottom: 50px;
         &:last-child {
@@ -22,10 +16,11 @@ footer {
   .wrap_comp {
     @include font-size(13px);
     color: #ffffff;
-    word-spacing: 1px;
-    padding-right: 10px;
+    @media only screen and (max-width : 1199px){
+      padding-right: 0;
+    }
     @media only screen and (max-width : 991px){
-      padding-right: 30px;
+      padding-right: 15px;
       order: 1;
     }
     @media #{$info-phone} {
@@ -33,7 +28,6 @@ footer {
       flex-flow: column;
       align-items: center;
       text-align: center;
-      padding: 0;
       p{
         width: 80%;
       }
@@ -44,16 +38,19 @@ footer {
     }
   }
   .wrap_search {
-    padding: 14px 12px 0 10px;
+    padding-top: 14px;
+    @media only screen and (max-width : 1199px){
+      padding-right: 0;
+    }
     @media only screen and (max-width : 991px){
-      padding: 0 0 0 40px;
-      order: 2;
+      padding: 0 15px 0 15px;
+      order: 3;
     }
     @media #{$info-phone} {
       display: flex;
       flex-flow: column;
       align-items: center;
-      padding: 0;
+      order: 2;
     }  
     h6 {
       font-weight: 700;
@@ -67,7 +64,6 @@ footer {
     p {
       color: #ffffff;
       @include font-size(13px);
-      word-spacing: 1px;
       padding-right: 20px;
       @media #{$info-phone} {
         padding-right: 0;
@@ -93,7 +89,7 @@ footer {
         color: #ffffff;
         @include font-size(13px);
       }
-      .fa {
+      .fas {
         border: none;
         background: none;
         @include font-size(20px);
@@ -106,19 +102,19 @@ footer {
     }
   }
   .wrap_link {
-    padding: 14px 6px 0 19px;
-    @media screen and (max-width : 1199px){
-      padding-left: 6px;
+    padding-top: 14px;
+    @media only screen and (max-width : 1199px){
+      padding-right: 0;
     }
     @media only screen and (max-width : 991px) {
-      padding: 27px 0 0 40px;
-      order: 4;
+      padding: 15px 15px 0 15px;
+      order: 2;
     }
     @media #{$info-phone} {
       display: flex;
       flex-flow: column;
       align-items: center;
-      padding: 0;
+      padding: 0 15px 0 15px;
       order: 3;
     }
     h6 {
@@ -149,24 +145,27 @@ footer {
     }
     .col_left {
       margin-right: 42px;
+      @media only screen and (min-width: 992px) and (max-width : 1199px){
+        margin-right: 27px;
+      }
     }
   }
   .wrap_info {
     @include font-size(13px);
-    padding: 65px 0 0 38px;
+    padding: 65px 15px 0 27px;
     color: #062033;
-    @media #{$info-tablet-horizontal} and (min-width:992px){
-      padding-left: 28px;
+    @media only screen and (max-width : 1199px){
+      padding-left: 12px;
     }
     @media only screen and (max-width : 991px){
-      padding: 71px 0 0 0;
-      order: 3;
+      padding: 55px 15px 0 27px;
+      order: 4;
     }
     @media #{$info-phone} {
       display: flex;
       flex-flow: column;
       align-items: center;
-      padding: 0;
+      padding: 0 15px 0 15px;
       order: 4;
     }
     p {
@@ -185,7 +184,7 @@ footer {
         width: 1px;
         background: #177e72;
         position: absolute;
-        left: -12px;
+        left: -13px;
         bottom: 4px;
         @media #{$info-tablet-vertical} {
           left: -13px;
