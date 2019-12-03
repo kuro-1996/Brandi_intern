@@ -24,14 +24,24 @@
   .slick-track {
     padding: 38px 0 62px 0;
   }
-  .slick-dotted.slick-slider {
-    margin: 0;
+  .slick-initialized .slick-slide{
+    display: flex;
   }
   .item-wrap {
+    &:nth-child(2){
+      padding: 0 9px 0 21px;
+    }
+    &:last-child{
+      padding: 0 3px 0 27px;
+    }
     @media #{$info-tablet-vertical} {
       margin-bottom: 30px;
+      &:nth-child(2){
+        padding: 0 15px 0 15px;
+      }
       &:last-child {
         margin: 0;
+        padding: 0 15px 0 15px;
       }
     }
     .item_img {
