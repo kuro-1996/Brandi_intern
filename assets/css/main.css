@@ -7487,12 +7487,8 @@ img {
 
 @media only screen and (min-width: 1200px) {
   .container {
-    max-width: 1230px;
+    max-width: 1200px;
   }
-}
-
-.row {
-  margin: 0;
 }
 
 button {
