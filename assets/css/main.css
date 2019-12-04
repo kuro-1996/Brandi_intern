@@ -7926,7 +7926,7 @@ footer .wrap_comp {
 
 @media only screen and (max-width: 991px) {
   footer .wrap_comp {
-    padding-right: 15px;
+    padding-right: 65px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -7946,6 +7946,7 @@ footer .wrap_comp {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+    padding: 0 15px 0 15px;
   }
   footer .wrap_comp p {
     width: 80%;
@@ -7969,10 +7970,10 @@ footer .wrap_search {
 
 @media only screen and (max-width: 991px) {
   footer .wrap_search {
-    padding: 0 15px 0 15px;
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    padding: 16px 15px 0 80px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 
@@ -7988,6 +7989,7 @@ footer .wrap_search {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0 15px 0 15px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -7999,7 +8001,7 @@ footer .wrap_search h6 {
   font-size: 14px;
   font-size: 0.875rem;
   color: #d7d5d0;
-  margin-bottom: 43px;
+  margin-bottom: 44px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -8012,7 +8014,7 @@ footer .wrap_search p {
   color: #ffffff;
   font-size: 13px;
   font-size: 0.8125rem;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -8077,10 +8079,10 @@ footer .wrap_link {
 
 @media only screen and (max-width: 991px) {
   footer .wrap_link {
-    padding: 15px 15px 0 15px;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    padding: 38px 15px 0 80px;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
 }
 
@@ -8169,10 +8171,10 @@ footer .wrap_info {
 
 @media only screen and (max-width: 991px) {
   footer .wrap_info {
-    padding: 55px 15px 0 27px;
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+    padding: 81px 65px 0 27px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 }
 
@@ -8197,7 +8199,7 @@ footer .wrap_info {
 
 footer .wrap_info p {
   color: #ffffff;
-  margin-bottom: 45px;
+  margin-bottom: 48px;
   position: relative;
 }
 
