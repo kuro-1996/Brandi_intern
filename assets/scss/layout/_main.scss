@@ -30,17 +30,17 @@
   .slick-dotted.slick-slider{
     margin-bottom: 0;
   }
-  .item-wrap {
+  .item__wrap {
     padding: 0 15px 0 30px;
     @media #{$info-tablet-vertical} {
       margin-bottom: 30px;
       padding-left: 15px;
     }
-    .item_img {
+    .wrap__img {
       float: left;
       height: 100%;
     }
-    .item_info {
+    .wrap__info {
       @include font-size(13px);
       color: #7a8993;
       padding-left: 52px;

@@ -43,7 +43,7 @@
   .slick-dotted.slick-slider{
     margin: 0;
   }
-  .slick-item_content {
+  .item__content {
     padding: 450px 0 50px 0;
     @media #{$info-tablet-vertical}{
       padding-top: 350px;
@@ -118,7 +118,7 @@
       }
     }
   }
-  .content_social {
+  .content__social {
     display: flex;
     justify-content: center;
     a {

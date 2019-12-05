@@ -10,7 +10,7 @@ header {
   }
   &.change {
     .nav-bar {
-      .nav-bar_menu {
+      .nav-bar__menu {
         a {
           &.active {
             @media #{$info-phone} {
@@ -31,7 +31,7 @@ header {
           }
         }
       }
-      .nav-bar_brand {
+      .nav-bar__brand {
         p {
           color: #ffffff;
           &::before {
@@ -53,7 +53,7 @@ header {
     @media #{$info-phone} {
       justify-content: center;
     }
-    .nav-bar_brand {
+    .nav-bar__brand {
       display: flex;
       align-items: center;
       z-index: 1;
@@ -85,7 +85,7 @@ header {
         }
       }
     }
-    .nav-bar_btn {
+    .nav-bar__btn {
       position: absolute;
       padding: 0;
       top: 15%;
@@ -108,7 +108,7 @@ header {
         background: rgba(#ffffff, 0.3);
         top: -40px;
         right: -50px;
-        .btn_icon {
+        .btn__icon {
           background: rgba(#ffffff, 0);
           left: 40%;
           top: 65%;
@@ -124,7 +124,7 @@ header {
             transform: rotate(-45deg);
           }
         }
-        & ~ .nav-bar_menu {
+        & ~ .nav-bar__menu {
           @media #{$info-phone} {
             width: 100%;
             a {
@@ -133,7 +133,7 @@ header {
           }
         }
       }
-      .btn_icon {
+      .btn__icon {
         width: 17px;
         height: 2px;
         background: #ffffff;
@@ -164,7 +164,7 @@ header {
         }
       }
     }
-    .nav-bar_menu {
+    .nav-bar__menu {
       display: flex;
       list-style: none;
       @media #{$info-phone} {

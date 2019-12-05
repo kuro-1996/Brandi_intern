@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    $('.nav-bar_menu').children().click(function () {   
-        $('.nav-bar_menu').children().removeClass('active');
-        $('.nav-bar_btn').removeClass('active');    
+    $('.nav-bar__menu').children().click(function () {   
+        $('.nav-bar__menu').children().removeClass('active');
+        $('.nav-bar__btn').removeClass('active');    
         $(this).addClass('active');
     });
 
-    $('.nav-bar_btn').click(function () {
+    $('.nav-bar__btn').click(function () {
         $(this).toggleClass('active');  
     });
 
