@@ -1,6 +1,6 @@
 .features {
   background: #f4f7f9;
-  padding: 70px 0 45px 0;
+  padding: 70px 0 51px 0;
   .slick-dots {
     position: unset;
     li {
@@ -21,11 +21,14 @@
       background: #000000;
     }
   }
-  .slick-track {
+  .slick-list {
     padding: 38px 0 62px 0;
   }
   .slick-initialized .slick-slide {
     display: flex;
+  }
+  .slick-dotted.slick-slider{
+    margin-bottom: 0;
   }
   .item-wrap {
     padding: 0 15px 0 30px;

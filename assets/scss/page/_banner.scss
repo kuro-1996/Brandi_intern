@@ -139,6 +139,7 @@
       i{
         @include font-size(19px);
         color: rgba(#ffffff,.3);
+        transition: all .3s ease-in-out;
       }
     }
   }
