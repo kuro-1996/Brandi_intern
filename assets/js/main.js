@@ -29,7 +29,9 @@ $(document).ready(function () {
         prevArrow: null,
         nextArrow: null,
         infinite: true,
-        speed: 300,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
         slidesToShow: 1,
         slidesToScroll: 1
     });
