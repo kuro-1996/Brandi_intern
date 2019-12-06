@@ -1,14 +1,56 @@
-#main{
-  height: 2537px;
-  background: #cacbcb;
-  .image{
-    height: 931px;
-    background: url('../img/body-img.jpg');
+.features {
+  background: #f4f7f9;
+  padding: 70px 0 51px 0;
+  .slick-dots {
+    position: unset;
+    li {
+      width: 8px;
+      height: 8px;
+      border: 1px solid #c3c6c7;
+      @include border-radius(50%);
+      button {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+    .slick-active {
+      background: #000000;
+    }
   }
-  @media #{$info-phone}{
-    height: 3507px;
-    & img{
-      height: 1080px;
+  .slick-list {
+    padding: 38px 0 62px 0;
+  }
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+  .slick-dotted.slick-slider{
+    margin-bottom: 0;
+  }
+  .item__wrap {
+    padding: 0 15px 0 30px;
+    @media #{$info-tablet-vertical} {
+      margin-bottom: 30px;
+      padding-left: 15px;
+    }
+    .wrap__img {
+      float: left;
+      height: 100%;
+    }
+    .wrap__info {
+      @include font-size(13px);
+      color: #7a8993;
+      padding-left: 52px;
+      h3 {
+        font-weight: 600;
+        @include font-size(20px);
+        color: #062033;
+        margin-bottom: 18px;
+      }
     }
   }
 }
+/*****features*********/

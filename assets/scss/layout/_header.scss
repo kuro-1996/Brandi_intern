@@ -1,218 +1,228 @@
-header{
-  background: #cdcdce;
-  height: 140px;
-  @media #{$info-phone}{
-    height: 96px;
+header {
+  @include background-opacity(#101636, 0.2);
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+  transition: background-color 500ms ease-in-out;
+  @media #{$info-phone} {
+    height: 48px;
   }
-  .top-info{
-    height: 70px;
-    width: 1170px;
-    margin: 0px auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    @media #{$info-phone}{
-      display: none
-    }
-    .top-info__contact,.top-info__mail{
-      display: flex;
-      height: 16px;
-      margin-right: 48px;
-      align-items: center;
-      p{
-        margin: 0px 0px 0px 10px;
-        font-size: 11px;
-      }
-    }
-    .top-info__fb,.top-info__twit,.top-info__in{
-      margin-left: 15px;
-    }
-
-    .top-info__fb, .top-info__zalo,.top-info__twit,.top-info__in{
-      img {
-        @include box-shadow(0 0 10px 2px grey)
-      }
-    }
-  }
-
-  .top-nav {
-    background: #318e5b;
-    height: 70px;
-    width: 1170px;
-    margin: 0px auto;
-    @include flex;
-    align-items: center;
-    @media #{$info-phone}{
-      height: 96px;
-      background: #ffffff;
-      width: 100%;
-      justify-content: center;
-    }
-
-    .btn.btn-primary.dropdown-toggle {
-      background: #328056;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 96px;
-      height: 96px;
-      text-align: center;
-      vertical-align: middle;
-      font-size: 40px;
-      i {
-        line-height: 96px;
-      }
-    }
-    .dropdown{
-      position: unset;
-      display: none;
-      @media #{$info-phone}{
-        display: block;
-      }
-    }
-    .dropdown-menu{
-      width: 401px;
-      background: #277149;
-      align-items: flex-start;
-      left: 0px;
-      top: 96px;
-      padding: 60px 0px 50px 0px;
-      li:active{
-        background: none;
-      }
-      li a{
-        display: block;
-        padding: 0px 0px 53px 30px;
-        font-weight: normal;
-        font-size: 18px;
-        color: #ffffff;
-        white-space: nowrap;
-        &:hover{
-          background: none;
-        }
-      }
-    }
-    .dropdown-menu__search__input{
-      width: 345px;
-      height: 38px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      margin-left: 27px;
-      background: #ffffff;
-      font-size: 10px;
-      padding-left: 16px;
-      outline: none;
-      &::placeholder {
-        color: #277149;
-      }
-
-    }
-    .top-nav__logo {
-      width: 195px;
-      background: white;
-      height: 70px;
-      @include flex-center(center);
-    }
-
-    .top-nav__menu {
-      display: flex;
-      width: 975px;
-      list-style: none;
-      font-size: 10px;
-      margin: 0px;
-      align-items: center;
-      @media #{$info-phone}{
-        display: none;
-      }
-
-      li a {
-        font-weight: 600;
-        color: #ffffff;
-      }
-
-      li {
-        height: 70px;
-        line-height: 70px;
-      }
-
-      li:hover {
-        background: #e6e6e6;
-        background: rgba(102, 160, 128, 0.5)
-      }
-
-      .top-nav__menu__home {
-        margin-left: 39px;
-        padding: 0px 26px 0px 26px;
-      }
-
-      .top-nav__menu__news {
-        padding: 0px 17px 0px 17px;
-      }
-
-      .top-nav__menu__dropdown {
-        padding: 0px 25px 0px 25px;
-        position: relative;
-        display: inline-block;
-        &:hover {
-          .top-nav__menu__drop-cont {
-            display: block;
-            background: #ffffff;
+  &.change {
+    .nav-bar {
+      .nav-bar__menu {
+        a {
+          &.active {
+            @media #{$info-phone} {
+              color: #32b0ee;
+            }
+            &::before {
+              background: #1b4f72;
+            }
+          }
+          &:hover {
+            color: #1b4f72;
+            @media #{$info-phone} {
+              color: #32b0ee;
+            }
+            &::before {
+              background: #1b4f72;
+            }
           }
         }
       }
-
-      .top-nav__menu__ticket {
-        padding: 0px 14px 0px 14px;
+      .nav-bar__brand {
+        p {
+          color: #ffffff;
+          &::before {
+            background: #000000;
+          }
+        }
       }
+    }
+  }
+  .container {
+    height: 100%;
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 0 15px;
+    @include font-size(13px);
+    height: 100%;
+    @media #{$info-phone} {
+      justify-content: center;
+    }
+    .nav-bar__brand {
+      display: flex;
+      align-items: center;
+      z-index: 1;
+      p {
+        position: relative;
+        color: rgba(#ffffff, 0.3);
+        padding-top: 10px;
+        font-weight: 300;
+        @media #{$info-phone} {
+          display: none;
+        }
 
-      .top-nav__menu__car {
-        padding: 0px 31px 0px 31px;
+        &::before {
+          content: "";
+          height: 17px;
+          width: 1px;
+          background: rgba(#2d9cd3, 0.3);
+          position: absolute;
+          left: -21px;
+          bottom: 1px;
+        }
       }
-
-      .top-nav__menu__contact {
-        padding: 0px 11px 0px 11px;
+      a {
+        padding-top: 2px;
+        margin-right: 50px;
+        @media #{$info-phone} {
+          padding: 0;
+          margin: 0;
+        }
       }
-
-      .top-nav__menu__drop-cont {
-        display: none;
+    }
+    .nav-bar__btn {
+      position: absolute;
+      padding: 0;
+      top: 15%;
+      transform: translate(-15%);
+      right: 0;
+      height: 35px;
+      width: 35px;
+      background: none;
+      border: none;
+      outline: none;
+      z-index: 1;
+      display: none;
+      @media #{$info-phone} {
+        display: block;
+      }
+      &.active {
+        height: 100px;
+        width: 100px;
+        @include border-radius(50%);
+        background: rgba(#ffffff, 0.3);
+        top: -40px;
+        right: -50px;
+        .btn__icon {
+          background: rgba(#ffffff, 0);
+          left: 40%;
+          top: 65%;
+          transform: translate(-40%, -65%);
+          &::before {
+            width: 20px;
+            bottom: 0;
+            transform: rotate(45deg);
+          }
+          &::after {
+            width: 20px;
+            top: 0;
+            transform: rotate(-45deg);
+          }
+        }
+        & ~ .nav-bar__menu {
+          @media #{$info-phone} {
+            width: 100%;
+            a {
+              display: inline;
+            }
+          }
+        }
+      }
+      .btn__icon {
+        width: 17px;
+        height: 2px;
+        background: #ffffff;
         position: absolute;
-        background-color: white;
-        width: 138px;
-        height: 126px;
-        z-index: 1;
-        padding-bottom: 25px;
-        left: 0px;
-        a {
-          color: #318a5a;
-          padding: 25px 0px 0px 20px;
-          display: block;
-          line-height: 10px;
-          text-decoration: none;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: rotate 500ms ease-in-out;
+        &::before {
+          content: "";
+          width: 17px;
+          height: 2px;
+          background: #ffffff;
+          position: absolute;
+          bottom: 5px;
+          right: 0;
+          transition: all 200ms ease-in-out;
         }
-        a:hover {
-          color: black;
-          text-decoration: none;
+        &::after {
+          content: "";
+          width: 17px;
+          height: 2px;
+          background: #ffffff;
+          position: absolute;
+          top: 5px;
+          right: 0;
+          transition: all 200ms ease-in-out;
         }
       }
-      .top-nav__search__input {
-        width: 307px;
-        height: 38px;
-        border-radius: 30px;
-        border: 1px solid #ccc;
-        color: white;
-        margin-left: 42px;
-        background: none;
-        font-size: 10px;
-        padding-left: 16px;
-        outline: none;
-        &::placeholder {
-          color: white;
+    }
+    .nav-bar__menu {
+      display: flex;
+      list-style: none;
+      @media #{$info-phone} {
+        width: 0;
+        height: 600px;
+        flex-flow: column;
+        position: absolute;
+        align-items: center;
+        padding: 20% 0 30% 0;
+        top: 0;
+        right: 0;
+        transition: all 300ms ease-in-out;
+        background: rgba(#000000, 0.9);
+      }
+      a {
+        padding: 31px 4px 0 4px;
+        margin-left: 26px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        @media #{$info-phone} {
+          display: none;
         }
-        @media #{$info-phone}{
-          background: #ffffff;
+        &:first-child {
+          margin: 0;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          top: 0;
+          left: 0;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          color: #32b0ee;
+          &::before {
+            background: #32b0ee;
+          }
+        }
+        @media #{$info-phone} {
+          margin: 0;
+          padding: 10px 0 10px 0;
+          text-align: right;
+          @include font-size(30px);
+          &::before {
+            display: none;
+          }
+        }
+      }
+      .active {
+        @media #{$info-phone} {
+          color: #32b0ee;
+        }
+        &::before {
+          background: #32b0ee;
         }
       }
     }
   }
 }
-

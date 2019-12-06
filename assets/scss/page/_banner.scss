@@ -1,31 +1,146 @@
-#banner{
-  height: 660px;
-  background: url('../img/banner-img.jpg');
-  padding-top: 103px;
-  @media #{$info-phone}{
-    height: 561px;
-    .carousel{
-      display: none;
+.banner {
+  background: url("../img/Bandi-banner.png");
+  .slick-dots{
+    left: unset;
+    display: flex;
+    width: auto;
+    flex-flow: column;
+    height: 53px;
+    justify-content: space-between;
+    margin:0;
+    bottom: 373px;
+    right: 48px;
+    .slick-active {
+      background: #ffffff;
+    }
+    button {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      &::before {
+        display: none;
+      }
+    }
+    @media #{$info-tablet-vertical} and (min-width: 768px){
+      bottom: 250px;
+    }
+    @media only screen and (min-width: 501px) and (max-width : 767px){
+      bottom: 48px;
+    }
+    @media #{$info-phone-4}{
+      bottom: 48px;
+      right: 24px;
+      height: 36px;
+    }
+    
+    li{
+      width: 8px;
+      height: 8px;
+      @include border-radius(50%);
+      border: 1px solid #ccc;
     }
   }
-  h2{
-    font-size: 37px;
-    color: #ffffff;
-    text-align: center;
-    font-weight: bold;
+  .slick-dotted.slick-slider{
+    margin: 0;
   }
-  .green{
-    color: #40b274;
+  .item__content {
+    padding: 450px 0 50px 0;
+    @media #{$info-tablet-vertical}{
+      padding-top: 350px;
+    }
+    @media #{$info-phone}{
+      padding-top: 250px;
+    }
+    @media #{$info-phone-4}{
+      padding-top: 200px;
+    }
+    h2,
+    h3,
+    p {
+      display: flex;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 300;
+    }
+    h2 {
+      @include font-size(62px);
+      @media #{$info-phone-4}{
+        @include font-size(42px);
+      }
+      span {
+        font-weight: 700;
+        padding-left: 17px;
+        @media #{$info-phone-4}{
+          padding-left: 9px;
+        }
+      }
+    }
+    h3 {
+      @include font-size(48px);
+      margin-bottom: 18px;
+      @media #{$info-phone-4}{
+        @include font-size(28px);
+      }
+      span {
+        color: #0ed691;
+        padding-right: 11px;
+        @media #{$info-phone-4}{
+          padding-right: 6px;
+        }
+      }
+    }
+    p {
+      @include font-size(18px);
+      display: flex;
+      align-items: center;
+      margin-bottom: 105px;
+      @media #{$info-phone-4}{
+        @include font-size(15px);
+      }
+      &::before,
+      &::after {
+        content: "";
+        width: 29px;
+        height: 1px;
+        background: #0ed691;
+      }
+      &::before {
+        margin-right: 32px;
+        @media #{$info-phone-4}{
+          margin-right: 16px;
+        }
+      }
+      &:after {
+        margin-left: 32px;
+        @media #{$info-phone-4}{
+          margin-left: 16px;
+        }
+      }
+    }
   }
-  p{
-    font-size: 10px;
-    color: white;
-    margin: 54px auto;
-    text-align: center;
-    width: 705px;
-
+  .content__social {
+    display: flex;
+    justify-content: center;
+    a {
+      padding-right: 18px;
+      cursor: pointer;
+      outline: none;
+      &:nth-child(3){
+        padding-right: 12px;
+      }
+      &:last-child{
+        padding:0;
+      }
+      &:hover {
+        i{
+          color: #ffffff;
+        }
+      }
+      i{
+        @include font-size(19px);
+        color: rgba(#ffffff,.3);
+        transition: all .3s ease-in-out;
+      }
+    }
   }
-  .carousel-indicators li { visibility: hidden; }
-  .glyphicon-chevron-left:before{content: url('../img/arrow-left.png');}
-  .glyphicon-chevron-right:before{content: url('../img/arrow-right.png');}
 }
