@@ -448,13 +448,13 @@
           }
         }
         .item__img {
-          width: 126px;
-          height: 126px;
+          width: 130px;
+          height: 130px;
           margin: 0 auto;
           margin-bottom: 27px;
           @include border-radius(50%);
           border: 2px solid #6d7680;
-          line-height: 119px;
+          line-height: 123px;
           @media #{$info-phone} {
             width: 85px;
             height: 85px;

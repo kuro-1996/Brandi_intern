@@ -45,6 +45,9 @@
   .slick-dotted.slick-slider {
     margin: 0;
   }
+  .slick-wrap__item{
+    background-size: cover;
+  }
   .slick-wrap__item.slick-active {
     .item__content {
       h2,

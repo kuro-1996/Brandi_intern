@@ -8457,13 +8457,13 @@ header .nav-bar .nav-bar__menu .active::before {
 }
 
 .funfact .funfact-content .content__info .info__item .item__img {
-  width: 126px;
-  height: 126px;
+  width: 130px;
+  height: 130px;
   margin: 0 auto;
   margin-bottom: 27px;
   border-radius: 50%;
   border: 2px solid #6d7680;
-  line-height: 119px;
+  line-height: 123px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -9440,6 +9440,10 @@ footer .footer-wrap__info p span a {
 
 .banner .slick-dotted.slick-slider {
   margin: 0;
+}
+
+.banner .slick-wrap__item {
+  background-size: cover;
 }
 
 .banner .slick-wrap__item.slick-active .item__content h2,
