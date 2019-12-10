@@ -168,7 +168,7 @@
     outline: none;
     background: none;
     border: none;
-    @include font-size(20px);
+    @include font-size(30px);
     @include animation(slideInUpShort);
     animation-duration: 1s;
     animation-iteration-count: infinite;

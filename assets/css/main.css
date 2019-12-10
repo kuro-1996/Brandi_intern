@@ -7491,6 +7491,10 @@ img {
   }
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
 body {
   background: #062033;
 }
@@ -7501,10 +7505,6 @@ button {
 
 input {
   outline: none;
-}
-
-.change {
-  background-color: #1ea78d;
 }
 
 .top {
@@ -7565,6 +7565,10 @@ header {
   header {
     height: 48px;
   }
+}
+
+header.change {
+  background-color: #1ea78d;
 }
 
 @media only screen and (max-width: 767px) {
@@ -7856,6 +7860,10 @@ header .nav-bar .nav-bar__menu .active::before {
   background: #32b0ee;
 }
 
+main {
+  background: #ffffff;
+}
+
 .features {
   background: #f4f7f9;
   padding: 70px 0 51px 0;
@@ -7877,16 +7885,11 @@ header .nav-bar .nav-bar__menu .active::before {
   position: unset;
 }
 
-.features .slick-dots li {
+.features .slick-dots li button {
   width: 8px;
   height: 8px;
   border: 1px solid #c3c6c7;
   border-radius: 50%;
-}
-
-.features .slick-dots li button {
-  width: 8px;
-  height: 8px;
   padding: 0;
 }
 
@@ -7894,7 +7897,7 @@ header .nav-bar .nav-bar__menu .active::before {
   display: none;
 }
 
-.features .slick-dots .slick-active {
+.features .slick-dots .slick-active button {
   background: #000000;
 }
 
@@ -7906,10 +7909,6 @@ header .nav-bar .nav-bar__menu .active::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.features .slick-dotted.slick-slider {
-  margin-bottom: 0;
 }
 
 .features .item__wrap {
@@ -7945,7 +7944,6 @@ header .nav-bar .nav-bar__menu .active::before {
 
 /*****features*********/
 .work {
-  background: #ffffff;
   padding-top: 92px;
 }
 
@@ -7962,7 +7960,8 @@ header .nav-bar .nav-bar__menu .active::before {
   height: 300px;
 }
 
-.work .work-content__gallery::after {
+.work .work-content__gallery::after,
+.work .gallery__grid::after {
   content: "";
   display: table;
   clear: both;
@@ -8081,7 +8080,6 @@ header .nav-bar .nav-bar__menu .active::before {
 }
 
 .work .grid__item img {
-  width: 100%;
   height: 100%;
 }
 
@@ -8098,7 +8096,6 @@ header .nav-bar .nav-bar__menu .active::before {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
   color: #ffffff;
   text-align: center;
   font-size: 18px;
@@ -8173,7 +8170,6 @@ header .nav-bar .nav-bar__menu .active::before {
 
 /***********work**********/
 .team {
-  background: #ffffff;
   padding: 94px 0 117px 0;
 }
 
@@ -8264,7 +8260,6 @@ header .nav-bar .nav-bar__menu .active::before {
   width: 270px;
   margin-right: 30px;
   position: relative;
-  padding: 0;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -8541,7 +8536,6 @@ header .nav-bar .nav-bar__menu .active::before {
 
 /********funfact********/
 .discuss {
-  background: #ffffff;
   padding: 93px 0 105px 0;
 }
 
@@ -9400,18 +9394,22 @@ footer .footer-wrap__info p span a {
 
 @-webkit-keyframes slideInUpShort {
   0% {
+    opacity: .7;
     -webkit-transform: translateY(8px);
             transform: translateY(8px);
   }
   25% {
+    opacity: .9;
     -webkit-transform: translateY(6px);
             transform: translateY(6px);
   }
   50% {
+    opacity: .9;
     -webkit-transform: translateY(4px);
             transform: translateY(4px);
   }
   75% {
+    opacity: .9;
     -webkit-transform: translateY(2px);
             transform: translateY(2px);
   }
@@ -9423,18 +9421,22 @@ footer .footer-wrap__info p span a {
 
 @keyframes slideInUpShort {
   0% {
+    opacity: .7;
     -webkit-transform: translateY(8px);
             transform: translateY(8px);
   }
   25% {
+    opacity: .9;
     -webkit-transform: translateY(6px);
             transform: translateY(6px);
   }
   50% {
+    opacity: .9;
     -webkit-transform: translateY(4px);
             transform: translateY(4px);
   }
   75% {
+    opacity: .9;
     -webkit-transform: translateY(2px);
             transform: translateY(2px);
   }
@@ -9726,8 +9728,8 @@ footer .footer-wrap__info p span a {
   outline: none;
   background: none;
   border: none;
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 30px;
+  font-size: 1.875rem;
   -webkit-animation: slideInUpShort;
   animation: slideInUpShort;
   -webkit-animation-duration: 1s;
