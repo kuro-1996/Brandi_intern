@@ -9593,27 +9593,27 @@ footer .footer-wrap__info p span a {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  bottom: 48px;
+  bottom: 52px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .banner .social-wrap a {
-  padding-right: 18px;
+  margin-right: 18px;
   cursor: pointer;
   outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .banner .social-wrap a:nth-child(3) {
-  padding-right: 12px;
+  margin-right: 12px;
 }
 
 .banner .social-wrap a:last-child {
-  padding: 0;
+  margin: 0;
 }
 
 .banner .social-wrap a:hover i {
