@@ -24,35 +24,35 @@ $(document).ready(function () {
     });
 
     //click menu to scroll to section
-    $('.nav-bar__menu a:first-child').click(function () {
+    $('.nav-link:first-child').click(function () {
         $('html,body').animate({
             scrollTop: $('.banner').offset().top - $('.nav-bar').height()
         },
             'slow');
     });
 
-    $('.nav-bar__menu a:nth-child(2)').click(function () {
+    $('.nav-link:nth-child(2)').click(function () {
         $('html,body').animate({
             scrollTop: $('.features').offset().top - $('.nav-bar').height()
         },
             'slow');
     });
 
-    $('.nav-bar__menu a:nth-child(3)').click(function () {
+    $('.nav-link:nth-child(3)').click(function () {
         $('html,body').animate({
             scrollTop: $('.work').offset().top - $('.nav-bar').height()
         },
             'slow');
     });
 
-    $('.nav-bar__menu a:nth-child(4)').click(function () {
+    $('.nav-link:nth-child(4)').click(function () {
         $('html,body').animate({
             scrollTop: $('.team').offset().top - $('.nav-bar').height()
         },
             'slow');
     });
 
-    $('.nav-bar__menu a:last-child').click(function () {
+    $('.nav-link:last-child').click(function () {
         $('html,body').animate({
             scrollTop: $('.discuss').offset().top - $('.nav-bar').height()
         },

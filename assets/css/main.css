@@ -8598,7 +8598,13 @@ header .nav-bar .nav-bar__menu .active::before {
 }
 
 .discuss .discuss-content .discuss-content__wrap .wrap__mess form {
-  width: 88.5%;
+  width: 770px;
+}
+
+@media screen and (max-width: 1199px) {
+  .discuss .discuss-content .discuss-content__wrap .wrap__mess form {
+    width: 593px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -8669,7 +8675,13 @@ header .nav-bar .nav-bar__menu .active::before {
 }
 
 .discuss .discuss-content .discuss-content__wrap .wrap__mess form .mess__input-top input {
-  width: 48%;
+  width: 370px;
+}
+
+@media screen and (max-width: 1199px) {
+  .discuss .discuss-content .discuss-content__wrap .wrap__mess form .mess__input-top input {
+    width: 281.5px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -8768,6 +8780,10 @@ header .nav-bar .nav-bar__menu .active::before {
   margin-bottom: 8px;
 }
 
+.discuss .discuss-content .discuss-content__wrap .wrap__mess .mess__link a:nth-child(4) {
+  margin-bottom: 15px;
+}
+
 .discuss .discuss-content .discuss-content__wrap .wrap__mess .mess__link a:last-child {
   margin-bottom: 24px;
 }
@@ -8778,8 +8794,17 @@ header .nav-bar .nav-bar__menu .active::before {
   font-size: 1.625rem;
 }
 
-.discuss .discuss-content .discuss-content__wrap .wrap__mess .mess__link img {
-  margin-bottom: 12px;
+.discuss .discuss-content .discuss-content__wrap .wrap__mess .mess__link i:hover {
+  color: #0eb493;
+}
+
+.discuss .discuss-content .discuss-content__wrap .wrap__mess .mess__link svg {
+  fill: rgba(6, 32, 51, 0.2);
+}
+
+.discuss .discuss-content .discuss-content__wrap .wrap__mess .mess__link svg:hover {
+  fill: #0eb493;
+  opacity: 1;
 }
 
 /*************discuss*********/
