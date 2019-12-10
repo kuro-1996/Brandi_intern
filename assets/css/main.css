@@ -7949,7 +7949,7 @@ header .nav-bar .nav-bar__menu .active::before {
   padding-top: 92px;
 }
 
-.work.change .work-content__grid {
+.work.change .grid__item {
   opacity: 1;
   -webkit-animation: fadeInLeft;
   animation: fadeInLeft;
@@ -7957,26 +7957,23 @@ header .nav-bar .nav-bar__menu .active::before {
           animation-duration: 1s;
 }
 
-.work .work-content__grid {
+.work .grid__item {
   opacity: 0;
+  height: 300px;
+}
+
+.work .work-content__gallery::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .work .work-header {
   margin-bottom: 31px;
 }
 
-.work .grid::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.work .work-content .work-content__top-info {
-  margin-bottom: 37px;
+.work .work-content p {
   padding: 0 15px 0 15px;
-}
-
-.work .work-content .work-content__top-info p {
   max-width: 940px;
   margin: 0 auto;
   margin-bottom: 48px;
@@ -7988,7 +7985,31 @@ header .nav-bar .nav-bar__menu .active::before {
   line-height: 1.35;
 }
 
-.work .btn-group {
+.work .gallery__grid {
+  min-height: 300px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1199px) {
+  .work .gallery__grid {
+    min-height: 250px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .work .gallery__grid {
+    min-height: 225px;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 501px) {
+  .work .gallery__grid {
+    min-height: 180px;
+  }
+}
+
+.work .gallery__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7997,9 +8018,11 @@ header .nav-bar .nav-bar__menu .active::before {
           justify-content: center;
   -ms-flex-flow: wrap;
       flex-flow: wrap;
+  margin-bottom: 37px;
+  padding: 0 15px 0 15px;
 }
 
-.work .btn-group .button {
+.work .gallery__btn .btn {
   font-weight: 700;
   padding: 6px 20px 6px 20px;
   background: none;
@@ -8011,56 +8034,62 @@ header .nav-bar .nav-bar__menu .active::before {
   transition: all 0.3s ease-in-out;
 }
 
-.work .btn-group .button:last-child {
+.work .gallery__btn .btn:last-child {
   margin: 0;
 }
 
-.work .btn-group .button:hover {
+.work .gallery__btn .btn:hover {
   background: #0eb493;
   color: #ffffff;
 }
 
-.work .btn-group .button.active {
+.work .gallery__btn .btn.active {
   background: #0eb493;
   color: #ffffff;
 }
 
-.work .element-item {
+.work .grid__item {
   float: left;
   width: 25%;
   height: 300px;
   position: relative;
 }
 
-@media only screen and (max-width: 992px) {
-  .work .element-item {
+@media screen and (max-width: 1199px) {
+  .work .grid__item {
     height: 250px;
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .work .grid__item {
+    height: 225px;
+  }
+}
+
 @media only screen and (max-width: 767px) and (min-width: 501px) {
-  .work .element-item {
+  .work .grid__item {
     height: 180px;
     width: calc(100% / 3);
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .work .element-item {
+  .work .grid__item {
     width: 50%;
   }
 }
 
-.work .element-item img {
+.work .grid__item img {
   width: 100%;
   height: 100%;
 }
 
-.work .element-item:hover .element-item__hover {
+.work .grid__item:hover .item__hover {
   opacity: 0.9;
 }
 
-.work .element-item .element-item__hover {
+.work .grid__item .item__hover {
   background: #0eb493;
   opacity: 0;
   -webkit-transition: opacity 400ms ease-in-out;
@@ -8078,19 +8107,19 @@ header .nav-bar .nav-bar__menu .active::before {
 }
 
 @media only screen and (max-width: 1200px) {
-  .work .element-item .element-item__hover {
+  .work .grid__item .item__hover {
     padding: 95px 10px 0 10px;
   }
 }
 
 @media only screen and (max-width: 992px) {
-  .work .element-item .element-item__hover {
+  .work .grid__item .item__hover {
     padding: 60px 20px 0 20px;
   }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 501px) {
-  .work .element-item .element-item__hover {
+  .work .grid__item .item__hover {
     padding-top: 40px;
     font-size: 16px;
     font-size: 1rem;
@@ -8098,20 +8127,20 @@ header .nav-bar .nav-bar__menu .active::before {
 }
 
 @media only screen and (max-width: 500px) {
-  .work .element-item .element-item__hover {
+  .work .grid__item .item__hover {
     padding-top: 80px;
     font-size: 16px;
     font-size: 1rem;
   }
 }
 
-.work .element-item .element-item__hover h5 {
+.work .grid__item .item__hover h5 {
   font-weight: 700;
   margin-bottom: 2px;
 }
 
 @media only screen and (max-width: 767px) {
-  .work .element-item .element-item__hover h5 {
+  .work .grid__item .item__hover h5 {
     padding-top: 20px;
     font-size: 16px;
     font-size: 1rem;
@@ -8119,7 +8148,7 @@ header .nav-bar .nav-bar__menu .active::before {
   }
 }
 
-.work .element-item .element-item__hover i {
+.work .grid__item .item__hover i {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -8130,7 +8159,7 @@ header .nav-bar .nav-bar__menu .active::before {
 }
 
 @media only screen and (max-width: 767px) {
-  .work .element-item .element-item__hover i {
+  .work .grid__item .item__hover i {
     margin-bottom: 10px;
     width: 30px;
     height: 30px;
@@ -8138,13 +8167,8 @@ header .nav-bar .nav-bar__menu .active::before {
   }
 }
 
-.work .element-item .element-item__hover p {
+.work .grid__item .item__hover p {
   color: #ffffff;
-}
-
-.work .element-item > * {
-  margin: 0;
-  padding: 0;
 }
 
 /***********work**********/
@@ -8274,6 +8298,8 @@ header .nav-bar .nav-bar__menu .active::before {
 .team .slick__item img {
   height: 300px;
   margin-bottom: 19px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 991px) {
@@ -8305,6 +8331,7 @@ header .nav-bar .nav-bar__menu .active::before {
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .team .slick__item .item__hover {
     width: 290px;
+    padding: 26px 25px 0 25px;
   }
 }
 
@@ -8312,6 +8339,7 @@ header .nav-bar .nav-bar__menu .active::before {
   .team .slick__item .item__hover {
     width: 210px;
     height: 200px;
+    padding: 11px 10px 0 10px;
   }
 }
 
@@ -8789,6 +8817,8 @@ header .nav-bar .nav-bar__menu .active::before {
 }
 
 .discuss .discuss-content .discuss-content__wrap .wrap__mess .mess__link i {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   color: #cdd2d6;
   font-size: 26px;
   font-size: 1.625rem;
@@ -8800,6 +8830,8 @@ header .nav-bar .nav-bar__menu .active::before {
 
 .discuss .discuss-content .discuss-content__wrap .wrap__mess .mess__link svg {
   fill: rgba(6, 32, 51, 0.2);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .discuss .discuss-content .discuss-content__wrap .wrap__mess .mess__link svg:hover {

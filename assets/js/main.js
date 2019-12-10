@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //menu item customize//
     $('.nav-bar__menu').children().click(function () {
         $('.nav-bar__menu').children().removeClass('active');
         $('.nav-bar__btn').removeClass('active');
@@ -10,6 +11,11 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+    $('.nav-bar__btn').click(function () {
+        $(this).toggleClass('active');
+    });
+     ////////////////////////
+    //scroll to top button//
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $('.scroll-top').fadeIn('500', 'swing');
@@ -22,8 +28,40 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: 0 }, 800);
         return false;
     });
-
-    //click menu to scroll to section
+     ////////////////////////
+    //work-section gallery//
+    $('.btn').on('click', function(){
+        $('.grid__item').hide();
+        $('.btn__all').addClass('check');
+        if($('.btn').hasClass('active')){
+            $('.btn').removeClass('active');
+        }
+    });
+    $('.btn__all').on('click', function () {
+        $('.btn__all').addClass('active');
+        if ($('.btn__all').hasClass('check')) {
+            $('.btn__all').removeClass('check');
+            $('.grid__item').show('slow');
+        }
+    });
+    $('.btn__brand').on('click',function () {
+        $('.btn__brand').addClass('active');
+        $('.grid__item.brand').show('slow');
+    });
+    $('.btn__web').on('click',function () {
+        $('.btn__web').addClass('active');
+        $('.grid__item.web').show('slow');
+    });
+    $('.btn__logo').on('click',function () {
+        $('.btn__logo').addClass('active');
+        $('.grid__item.logo').show('slow');
+    });
+    $('.btn__photo').on('click',function () {
+        $('.btn__photo').addClass('active');
+        $('.grid__item.photo').show('slow');
+    });
+     ///////////////////////////////////
+    //click menu to scroll to section//
     $('.nav-link:first-child').click(function () {
         $('html,body').animate({
             scrollTop: $('.banner').offset().top - $('.nav-bar').height()
@@ -58,7 +96,8 @@ $(document).ready(function () {
         },
             'slow');
     });
-
+     //////////////////////////////////////
+    //scroll to section to add animation//
     a = 0;
     $(window).scroll(function () {
         if ($(this).scrollTop() > $('.banner').offset().top + $('.banner').height() - $('header').height()) {
@@ -99,24 +138,8 @@ $(document).ready(function () {
             $('footer').addClass('change');
         }
     });
-    //add animation when scroll
-
-    $('.nav-bar__btn').click(function () {
-        $(this).toggleClass('active');
-    });
-
-    $('.team-wrap__slick').slick({
-        dots: true,
-        loop: true,
-        infinite: true,
-        prevArrow: null,
-        nextArrow: null,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        variableWidth: true
-    });
-
+     ////////////////
+    //banner slick//
     $('.slick-wrap').slick({
         dots: true,
         loop: true,
@@ -129,8 +152,8 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1
     });
-    
-
+     //////////////////////////
+    //features-section slick//
     $('.features-content').slick({
         dots: true,
         loop: true,
@@ -141,22 +164,18 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1
     });
-
-    var $grid = $('.work-content__grid').isotope({
-        itemSelector: '.element-item',
-        layoutMode: 'fitRows'
+     ////////////////////////
+    //team-section slick//
+    $('.team-wrap__slick').slick({
+        dots: true,
+        loop: true,
+        infinite: true,
+        prevArrow: null,
+        nextArrow: null,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true
     });
-
-    $('.filter-btn-group').on('click', 'button', function () {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
-    });
-
-    $('.btn-group').each(function (i, buttonGroup) {
-        var $buttonGroup = $(buttonGroup);
-        $buttonGroup.on('click', 'button', function () {
-            $buttonGroup.find('.is-checked').removeClass('is-checked');
-            $(this).addClass('is-checked');
-        });
-    });
+     ////////////////////////
 });
