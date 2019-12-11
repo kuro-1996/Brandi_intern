@@ -17,6 +17,9 @@ main{
   .slick-dots {
     position: unset;
     li {
+      width: auto;
+      height: auto;
+      margin: 0 7.5px;
       button {
         width: 8px;
         height: 8px;
@@ -250,16 +253,19 @@ main{
     .slick-dots {
       position: unset;
       .slick-active {
-        background: #000000;
+        button{
+          background: #000000;
+        }      
       }
       li {
-        width: 8px;
-        height: 8px;
-        border: 1px solid #c3c6c7;
-        @include border-radius(50%);
+        width: auto;
+        height: auto;
+        margin: 0 7.5px;
         button {
           width: 8px;
           height: 8px;
+          border: 1px solid #c3c6c7;
+          @include border-radius(50%);
           padding: 0;
           &::before {
             display: none;

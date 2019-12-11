@@ -140,6 +140,7 @@ $(document).ready(function () {
             $('footer').addClass('change');
         }
     });
+
      ////////////////
     /*banner slick*/
     $('.slick-wrap').slick({

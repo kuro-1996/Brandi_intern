@@ -7885,6 +7885,12 @@ main {
   position: unset;
 }
 
+.features .slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0 7.5px;
+}
+
 .features .slick-dots li button {
   width: 8px;
   height: 8px;
@@ -8205,20 +8211,21 @@ main {
   position: unset;
 }
 
-.team .team-wrap__slick .slick-dots .slick-active {
+.team .team-wrap__slick .slick-dots .slick-active button {
   background: #000000;
 }
 
 .team .team-wrap__slick .slick-dots li {
-  width: 8px;
-  height: 8px;
-  border: 1px solid #c3c6c7;
-  border-radius: 50%;
+  width: auto;
+  height: auto;
+  margin: 0 7.5px;
 }
 
 .team .team-wrap__slick .slick-dots li button {
   width: 8px;
   height: 8px;
+  border: 1px solid #c3c6c7;
+  border-radius: 50%;
   padding: 0;
 }
 
@@ -9728,6 +9735,7 @@ footer .footer-wrap__info p span a {
   outline: none;
   background: none;
   border: none;
+  display: none;
   font-size: 30px;
   font-size: 1.875rem;
   -webkit-animation: slideInUpShort;
