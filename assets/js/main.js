@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //menu item customize//
+    /*menu item customize*/
     $('.nav-bar__menu').children().click(function () {
         $('.nav-bar__menu').children().removeClass('active');
         $('.nav-bar__btn').removeClass('active');
@@ -14,8 +14,8 @@ $(document).ready(function () {
     $('.nav-bar__btn').click(function () {
         $(this).toggleClass('active');
     });
-     ////////////////////////
-    //scroll to top button//
+     /**********************/
+    /*scroll to top button*/
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $('.scroll-top').fadeIn('500', 'swing');
@@ -28,40 +28,40 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: 0 }, 800);
         return false;
     });
-     ////////////////////////
-    //work-section gallery//
-    $('.btn').on('click', function(){
+     /**********************/
+    /*work-section gallery*/
+    $('.btn').click(function(){
         $('.grid__item').hide();
         $('.btn__all').addClass('check');
         if($('.btn').hasClass('active')){
             $('.btn').removeClass('active');
         }
     });
-    $('.btn__all').on('click', function () {
+    $('.btn__all').click(function () {
         $('.btn__all').addClass('active');
         if ($('.btn__all').hasClass('check')) {
             $('.btn__all').removeClass('check');
-            $('.grid__item').show('slow');
+            $('.grid__item').show();
         }
     });
-    $('.btn__brand').on('click',function () {
+    $('.btn__brand').click(function () {
         $('.btn__brand').addClass('active');
-        $('.grid__item.brand').show('slow');
+        $('.grid__item.brand').show();
     });
-    $('.btn__web').on('click',function () {
+    $('.btn__web').click(function () {
         $('.btn__web').addClass('active');
-        $('.grid__item.web').show('slow');
+        $('.grid__item.web').show();
     });
-    $('.btn__logo').on('click',function () {
+    $('.btn__logo').click(function () {
         $('.btn__logo').addClass('active');
-        $('.grid__item.logo').show('slow');
+        $('.grid__item.logo').show();
     });
-    $('.btn__photo').on('click',function () {
+    $('.btn__photo').click(function () {
         $('.btn__photo').addClass('active');
-        $('.grid__item.photo').show('slow');
+        $('.grid__item.photo').show();
     });
      ///////////////////////////////////
-    //click menu to scroll to section//
+    /*click menu to scroll to section*/
     $('.nav-link:first-child').click(function () {
         $('html,body').animate({
             scrollTop: $('.banner').offset().top - $('.nav-bar').height()
@@ -97,12 +97,13 @@ $(document).ready(function () {
             'slow');
     });
      //////////////////////////////////////
-    //scroll to section to add animation//
+    /*scroll to section to add animation*/
     a = 0;
     $(window).scroll(function () {
         if ($(this).scrollTop() > $('.banner').offset().top + $('.banner').height() - $('header').height()) {
             $('header').addClass('change');
-        } else if ($(this).scrollTop() <= $('.banner').offset().top + $('.banner').height() - $('header').height()) {
+        } 
+        if ($(this).scrollTop() <= $('.banner').offset().top + $('.banner').height() - $('header').height()) {
             $('header').removeClass('change');
         }
         var arr = [$('.features'), $('.work'), $('.team'), $('.discuss')]
@@ -111,6 +112,7 @@ $(document).ready(function () {
                 el.addClass('change');
             }
         });
+        /* add animation and counter when scroll to funfact section  */
         if (a == 0 && $(this).scrollTop() > $('.funfact').offset().top - 500) {
             $('.funfact').addClass('change');
             $('.item__counter').each(function () {
@@ -139,7 +141,7 @@ $(document).ready(function () {
         }
     });
      ////////////////
-    //banner slick//
+    /*banner slick*/
     $('.slick-wrap').slick({
         dots: true,
         loop: true,
@@ -153,7 +155,7 @@ $(document).ready(function () {
         slidesToScroll: 1
     });
      //////////////////////////
-    //features-section slick//
+    /*features-section slick*/
     $('.features-content').slick({
         dots: true,
         loop: true,
@@ -164,8 +166,8 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1
     });
-     ////////////////////////
-    //team-section slick//
+     //////////////////////
+    /*team-section slick*/
     $('.team-wrap__slick').slick({
         dots: true,
         loop: true,
