@@ -85,19 +85,15 @@
 
 @include keyframes(slideInUpShort) {
   0% {
-    opacity: .7;
     transform: translateY(8px);
   }
   25%{
-    opacity: .9;
     transform: translateY(6px);
   }
   50%{
-    opacity: .9;
     transform: translateY(4px);
   }
   75%{
-    opacity: .9;
     transform: translateY(2px);
   }
   100% {

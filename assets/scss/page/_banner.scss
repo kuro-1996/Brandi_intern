@@ -170,14 +170,16 @@
     border: none;
     display: none;
     @include font-size(30px);
-    @include animation(slideInUpShort);
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    @include animation(slideInUpShort 1s ease infinite alternate);
     position: fixed;
     right: 50px;
     bottom: 50px;
     text-align: center;
     z-index: 1;
+    @media screen and (max-width: 767px){
+      right: 25px;
+      bottom: 25px;
+    }
     i {
       color: #e98f11;
     }

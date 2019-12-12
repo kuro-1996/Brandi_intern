@@ -7468,12 +7468,18 @@ a:hover {
   color: white;
 }
 
-ul, ol, p {
+ul,
+ol,
+p {
   padding: 0;
   margin: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
 }
 
@@ -7782,7 +7788,6 @@ header .nav-bar .nav-bar__menu {
 @media only screen and (max-width: 767px) {
   header .nav-bar .nav-bar__menu {
     width: 0;
-    height: 600px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
@@ -7791,7 +7796,7 @@ header .nav-bar .nav-bar__menu {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 20% 0 30% 0;
+    padding: 20% 0 200% 0;
     top: 0;
     right: 0;
     -webkit-transition: all 300ms ease-in-out;
@@ -7978,8 +7983,7 @@ main {
 }
 
 .work .work-content p {
-  padding: 0 15px 0 15px;
-  max-width: 940px;
+  max-width: 950px;
   margin: 0 auto;
   margin-bottom: 48px;
   font-weight: 600;
@@ -7990,27 +7994,9 @@ main {
   line-height: 1.35;
 }
 
-.work .gallery__grid {
-  min-height: 300px;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 1199px) {
-  .work .gallery__grid {
-    min-height: 250px;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .work .gallery__grid {
-    min-height: 225px;
-  }
-}
-
-@media only screen and (max-width: 767px) and (min-width: 501px) {
-  .work .gallery__grid {
-    min-height: 180px;
+@media only screen and (max-width: 767px) {
+  .work .work-content p {
+    padding: 0 15px 0 15px;
   }
 }
 
@@ -8027,6 +8013,12 @@ main {
   padding: 0 15px 0 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .work .gallery__btn {
+    margin-bottom: 30px;
+  }
+}
+
 .work .gallery__btn .btn {
   font-weight: 700;
   padding: 6px 20px 6px 20px;
@@ -8039,8 +8031,20 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 767px) {
+  .work .gallery__btn .btn {
+    margin-bottom: 6px;
+  }
+}
+
 .work .gallery__btn .btn:last-child {
   margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .work .gallery__btn .btn:last-child {
+    margin-bottom: 6px;
+  }
 }
 
 .work .gallery__btn .btn:hover {
@@ -8057,89 +8061,121 @@ main {
   float: left;
   width: 25%;
   height: 300px;
+  overflow: hidden;
   position: relative;
+  background-size: cover;
+  background-position: center;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 2304px) {
   .work .grid__item {
-    height: 250px;
+    height: 450px;
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media screen and (min-width: 1920px) and (max-width: 2303px) {
+  .work .grid__item {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+  .work .grid__item {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
   .work .grid__item {
     height: 225px;
   }
 }
 
-@media only screen and (max-width: 767px) and (min-width: 501px) {
+@media only screen and (max-width: 992px) {
+  .work .grid__item {
+    height: 200px;
+    width: calc(100% / 3);
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 601px) {
   .work .grid__item {
     height: 180px;
     width: calc(100% / 3);
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .work .grid__item {
     width: 50%;
   }
 }
 
-.work .grid__item img {
-  height: 100%;
-}
-
 .work .grid__item:hover .item__hover {
-  opacity: 0.9;
+  bottom: 0;
 }
 
 .work .grid__item .item__hover {
   background: #0eb493;
-  opacity: 0;
-  -webkit-transition: opacity 400ms ease-in-out;
-  transition: opacity 400ms ease-in-out;
+  opacity: 0.9;
+  -webkit-transition: bottom 400ms ease-in-out;
+  transition: bottom 400ms ease-in-out;
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  bottom: -100%;
   color: #ffffff;
   text-align: center;
-  font-size: 18px;
-  font-size: 1.125rem;
   padding-top: 95px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media screen and (min-width: 2304px) {
   .work .grid__item .item__hover {
-    padding: 95px 10px 0 10px;
+    padding-top: 170px;
+  }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2303px) {
+  .work .grid__item .item__hover {
+    padding-top: 150px;
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+  .work .grid__item .item__hover {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .work .grid__item .item__hover {
+    padding: 60px 10px 0 10px;
   }
 }
 
 @media only screen and (max-width: 992px) {
   .work .grid__item .item__hover {
-    padding: 60px 20px 0 20px;
+    padding: 50px 20px 0 20px;
   }
 }
 
-@media only screen and (max-width: 767px) and (min-width: 501px) {
+@media only screen and (max-width: 767px) and (min-width: 601px) {
   .work .grid__item .item__hover {
-    padding-top: 40px;
-    font-size: 16px;
-    font-size: 1rem;
+    padding: 50px 10px 0 10px;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .work .grid__item .item__hover {
-    padding-top: 80px;
-    font-size: 16px;
-    font-size: 1rem;
+    padding-top: 60px;
   }
 }
 
 .work .grid__item .item__hover h5 {
   font-weight: 700;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 @media only screen and (max-width: 767px) {
@@ -8157,7 +8193,7 @@ main {
   border-radius: 50%;
   border: 1px solid #ffffff;
   text-align: center;
-  line-height: 35px;
+  line-height: 38px;
   margin-bottom: 25px;
 }
 
@@ -8171,6 +8207,8 @@ main {
 }
 
 .work .grid__item .item__hover p {
+  font-size: 13px;
+  font-size: 0.8125rem;
   color: #ffffff;
 }
 
@@ -8266,6 +8304,7 @@ main {
 .team .slick__item {
   width: 270px;
   margin-right: 30px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -8278,7 +8317,7 @@ main {
 @media screen and (max-width: 991px) {
   .team .slick__item {
     width: 210px;
-    height: 270px;
+    height: 290px;
   }
 }
 
@@ -8290,10 +8329,10 @@ main {
 }
 
 .team .slick__item:hover .item__hover {
-  opacity: 0.9;
+  top: 0;
 }
 
-.team .slick__item:hover .hover__name h6 {
+.team .slick__item:hover .item__name h6 {
   color: #0eb493;
 }
 
@@ -8306,7 +8345,7 @@ main {
 
 @media screen and (max-width: 991px) {
   .team .slick__item img {
-    height: 200px;
+    height: 220px;
     width: 100%;
   }
 }
@@ -8322,26 +8361,30 @@ main {
   width: 270px;
   height: 300px;
   background: #0eb493;
-  opacity: 0;
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
+  opacity: 0.9;
+  -webkit-transition: top 400ms ease-in-out;
+  transition: top 400ms ease-in-out;
   position: absolute;
-  top: 0;
+  top: -100%;
+  font-size: 16px;
+  font-size: 1rem;
   padding: 21px 20px 0 20px;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .team .slick__item .item__hover {
     width: 290px;
-    padding: 26px 25px 0 25px;
+    padding: 35px 25px 0 25px;
   }
 }
 
 @media screen and (max-width: 991px) {
   .team .slick__item .item__hover {
     width: 210px;
-    height: 200px;
-    padding: 11px 10px 0 10px;
+    height: 220px;
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding: 21px 10px 0 10px;
   }
 }
 
@@ -8349,7 +8392,7 @@ main {
   .team .slick__item .item__hover {
     width: 240px;
     height: 250px;
-    padding-top: 28px;
+    padding: 40px 22px 0 22px;
   }
 }
 
@@ -8362,26 +8405,26 @@ main {
 }
 
 .team .slick__item .item__hover p {
-  font-size: 16px;
-  font-size: 1rem;
   color: #ffffff;
   text-align: center;
   margin-bottom: 65px;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .team .slick__item .item__hover p {
+    margin-bottom: 50px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .team .slick__item .item__hover p {
-    font-size: 14px;
-    font-size: 0.875rem;
     margin-bottom: 15px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .team .slick__item .item__hover p {
-    font-size: 16px;
-    font-size: 1rem;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
   }
 }
 
@@ -8437,11 +8480,11 @@ main {
   color: #062033;
 }
 
-.team .slick__item .hover__name {
+.team .slick__item .item__name {
   text-align: center;
 }
 
-.team .slick__item .hover__name h6 {
+.team .slick__item .item__name h6 {
   font-weight: 600;
   font-size: 18px;
   font-size: 1.125rem;
@@ -8449,7 +8492,7 @@ main {
   transition: all 0.5s ease-in-out;
 }
 
-.team .slick__item .hover__name p {
+.team .slick__item .item__name p {
   font-size: 13px;
   font-size: 0.8125rem;
   color: #73828d;
@@ -9401,22 +9444,18 @@ footer .footer-wrap__info p span a {
 
 @-webkit-keyframes slideInUpShort {
   0% {
-    opacity: .7;
     -webkit-transform: translateY(8px);
             transform: translateY(8px);
   }
   25% {
-    opacity: .9;
     -webkit-transform: translateY(6px);
             transform: translateY(6px);
   }
   50% {
-    opacity: .9;
     -webkit-transform: translateY(4px);
             transform: translateY(4px);
   }
   75% {
-    opacity: .9;
     -webkit-transform: translateY(2px);
             transform: translateY(2px);
   }
@@ -9428,22 +9467,18 @@ footer .footer-wrap__info p span a {
 
 @keyframes slideInUpShort {
   0% {
-    opacity: .7;
     -webkit-transform: translateY(8px);
             transform: translateY(8px);
   }
   25% {
-    opacity: .9;
     -webkit-transform: translateY(6px);
             transform: translateY(6px);
   }
   50% {
-    opacity: .9;
     -webkit-transform: translateY(4px);
             transform: translateY(4px);
   }
   75% {
-    opacity: .9;
     -webkit-transform: translateY(2px);
             transform: translateY(2px);
   }
@@ -9738,17 +9773,20 @@ footer .footer-wrap__info p span a {
   display: none;
   font-size: 30px;
   font-size: 1.875rem;
-  -webkit-animation: slideInUpShort;
-  animation: slideInUpShort;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation: slideInUpShort 1s ease infinite alternate;
+  animation: slideInUpShort 1s ease infinite alternate;
   position: fixed;
   right: 50px;
   bottom: 50px;
   text-align: center;
   z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .banner .scroll-top {
+    right: 25px;
+    bottom: 25px;
+  }
 }
 
 .banner .scroll-top i {
