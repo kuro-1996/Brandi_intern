@@ -6,11 +6,6 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
-    $('.button').click(function () {
-        $('.button').removeClass('active');
-        $(this).addClass('active');
-    });
-
     $('.nav-bar__btn').click(function () {
         $(this).toggleClass('active');
     });
@@ -25,8 +20,9 @@ $(document).ready(function () {
     });
 
     $('.scroll-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 800);
-        return false;
+        $('html,body').animate({
+            scrollTop: 0},
+        'slow');
     });
      /**********************/
     /*work-section gallery*/
@@ -64,9 +60,8 @@ $(document).ready(function () {
     /*click menu to scroll to section*/
     $('.nav-link:first-child').click(function () {
         $('html,body').animate({
-            scrollTop: $('.banner').offset().top - $('.nav-bar').height()
-        },
-            'slow');
+            scrollTop: 0},
+        'slow');
     });
 
     $('.nav-link:nth-child(2)').click(function () {
@@ -100,10 +95,10 @@ $(document).ready(function () {
     /*scroll to section to add animation*/
     a = 0;
     $(window).scroll(function () {
-        if ($(this).scrollTop() > $('.banner').offset().top + $('.banner').height() - $('header').height()) {
+        if ($(this).scrollTop() > $('.banner').height() - $('header').height()) {
             $('header').addClass('change');
         } 
-        if ($(this).scrollTop() <= $('.banner').offset().top + $('.banner').height() - $('header').height()) {
+        if ($(this).scrollTop() <= $('.banner').height() - $('header').height()) {
             $('header').removeClass('change');
         }
         var arr = [$('.features'), $('.work'), $('.team'), $('.discuss')]
@@ -112,6 +107,7 @@ $(document).ready(function () {
                 el.addClass('change');
             }
         });
+        
         /* add animation and counter when scroll to funfact section  */
         if (a == 0 && $(this).scrollTop() > $('.funfact').offset().top - 500) {
             $('.funfact').addClass('change');

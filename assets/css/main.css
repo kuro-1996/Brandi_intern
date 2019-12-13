@@ -7916,6 +7916,12 @@ main {
   padding: 38px 0 62px 0;
 }
 
+@media screen and (max-width: 767px) {
+  .features .slick-list {
+    padding-bottom: 38px;
+  }
+}
+
 .features .slick-initialized .slick-slide {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8215,6 +8221,7 @@ main {
 /***********work**********/
 .team {
   padding: 94px 0 117px 0;
+  position: relative;
 }
 
 .team.change .team-wrap__slick {
@@ -8564,16 +8571,16 @@ main {
 
 @media only screen and (max-width: 767px) {
   .funfact .funfact-content .content__info .info__item .item__img {
-    width: 85px;
-    height: 85px;
-    line-height: 81px;
+    width: 80px;
+    height: 80px;
+    line-height: 72px;
     margin-bottom: 15px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .funfact .funfact-content .content__info .info__item .item__img img {
-    width: 50%;
+    width: 35%;
   }
 }
 
@@ -8630,6 +8637,12 @@ main {
   margin-bottom: 69px;
 }
 
+@media screen and (max-width: 767px) {
+  .discuss .discuss-content .discuss-content__wrap > p {
+    margin-bottom: 40px;
+  }
+}
+
 .discuss .discuss-content .discuss-content__wrap .wrap__info {
   padding-top: 6px;
 }
@@ -8646,18 +8659,33 @@ main {
   margin-bottom: 33px;
 }
 
-.discuss .discuss-content .discuss-content__wrap .wrap__info p {
+@media screen and (max-width: 767px) {
+  .discuss .discuss-content .discuss-content__wrap .wrap__info h5 {
+    margin-bottom: 22px;
+  }
+}
+
+.discuss .discuss-content .discuss-content__wrap .wrap__info address {
   color: #b9bec1;
   font-size: 12.3px;
   font-size: 0.76875rem;
-  white-space: pre-line;
   line-height: 2;
 }
 
 @media only screen and (max-width: 767px) {
-  .discuss .discuss-content .discuss-content__wrap .wrap__info p {
+  .discuss .discuss-content .discuss-content__wrap .wrap__info address {
     padding-right: 50px;
   }
+}
+
+.discuss .discuss-content .discuss-content__wrap .wrap__info address a {
+  color: #b9bec1;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.discuss .discuss-content .discuss-content__wrap .wrap__info address a:hover {
+  color: #0ed691;
 }
 
 .discuss .discuss-content .discuss-content__wrap .wrap__mess {
@@ -8691,6 +8719,12 @@ main {
   font-size: 1.5rem;
   color: #062033;
   margin-bottom: 41px;
+}
+
+@media screen and (max-width: 767px) {
+  .discuss .discuss-content .discuss-content__wrap .wrap__mess form label {
+    margin-bottom: 22px;
+  }
 }
 
 .discuss .discuss-content .discuss-content__wrap .wrap__mess form input {
@@ -9512,6 +9546,30 @@ footer .footer-wrap__info p span a {
   }
 }
 
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .banner {
   position: relative;
 }
@@ -9746,8 +9804,20 @@ footer .footer-wrap__info p span a {
   display: flex;
 }
 
+@media screen and (max-width: 767px) {
+  .banner .social-wrap a {
+    margin-right: 13px;
+  }
+}
+
 .banner .social-wrap a:nth-child(3) {
   margin-right: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .banner .social-wrap a:nth-child(3) {
+    margin-right: 7px;
+  }
 }
 
 .banner .social-wrap a:last-child {
