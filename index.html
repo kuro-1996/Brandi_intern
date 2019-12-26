@@ -207,11 +207,11 @@
         </p>
         <div class="work-content__gallery">
           <div class="gallery__btn">
-            <button class="btn btn__all active check">All</button>
-            <button class="btn btn__brand">Branding</button>
-            <button class="btn btn__web">Web</button>
-            <button class="btn btn__logo">Logo Design</button>
-            <button class="btn btn__photo">Photography</button>
+            <button id="All" class="btn btn__all active check">All</button>
+            <button id="Brand" class="btn btn__brand">Branding</button>
+            <button id="Web" class="btn btn__web">Web</button>
+            <button id="Logo" class="btn btn__logo">Logo Design</button>
+            <button id="Photo" class="btn btn__photo">Photography</button>
           </div>
           <div class="gallery__grid">
             <div class="grid__item brand" style="background-image: url('assets/img/work1.jpg');">
@@ -521,6 +521,36 @@
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
   <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+  <script>
+    if (window.location.toString().includes("Logo")) {
+      $(".grid__item").hide();
+      if ($(".btn").hasClass("active"))
+			$(".btn").removeClass("active");
+      $(".btn__logo").addClass("active");
+      $(".grid__item.logo").show();    
+    }
+    if (window.location.toString().includes("Brand")) {
+      $(".grid__item").hide();
+      if ($(".btn").hasClass("active"))
+			$(".btn").removeClass("active");
+      $(".btn__brand").addClass("active");
+      $(".grid__item.brand").show();    
+    }
+    if (window.location.toString().includes("Web")) {
+      $(".grid__item").hide();
+      if ($(".btn").hasClass("active"))
+			$(".btn").removeClass("active");
+      $(".btn__web").addClass("active");
+      $(".grid__item.web").show();    
+    }
+    if (window.location.toString().includes("Photo")) {
+      $(".grid__item").hide();
+      if ($(".btn").hasClass("active"))
+			$(".btn").removeClass("active");
+      $(".btn__photo").addClass("active");
+      $(".grid__item.photo").show();    
+    }
+  </script>
   <script src="assets/js/vendor/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/js/vendor/countUp.min.js"></script>
   <script type="text/javascript" src="assets/js/vendor/slick.min.js"></script>
