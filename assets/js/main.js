@@ -236,30 +236,21 @@ $(document).ready(function() {
 	// });
 });
 
-if (window.location.hash && !window.location.toString().includes("sec")) {
-	scroll(0, 0);
-	// setTimeout(function() {
-	// 	scroll(0, 0);
-	// }, 0);
-}
+// if (window.location.hash && !window.location.toString().includes("sec")) {
+// 	scroll(0, 0);
+// 	// setTimeout(function() {
+// 	// 	scroll(0, 0);
+// 	// }, 0);
+// }
 
-// $(function() {
-// 	$(".button").on("click", function() {
-// 		$("html,body").animate(
-// 			{
-// 				scrollTop: $($(this).attr("href")).offset().top - 100
-// 			},
-// 			1500
-// 		);
-// 	});
-// 	if (window.location.hash) {
-// 		$("html,body").animate(
-// 			{
-// 				scrollTop: $(window.location.hash).offset().top -100
-// 			},
-// 			1500
-// 		);
-// 	}
-// });
+$(function() {
+	if (window.location.hash) {
+		$("html,body").animate(
+			{
+				scrollTop: $(window.location.hash).offset().top -100
+			}
+		);
+	}
+});
 
 
