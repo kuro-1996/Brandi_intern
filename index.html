@@ -522,24 +522,31 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
   <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
   <script>
-    if(!window.location.toString().includes("All") && window.location.hash){
+    if (window.location.toString().includes("Logo")) {
       $(".grid__item").hide();
       if ($(".btn").hasClass("active"))
 			$(".btn").removeClass("active");
-    }
-    if (window.location.toString().includes("Logo")) {
       $(".btn__logo").addClass("active");
       $(".grid__item.logo").show();    
     }
     if (window.location.toString().includes("Brand")) {
+      $(".grid__item").hide();
+      if ($(".btn").hasClass("active"))
+			$(".btn").removeClass("active");
       $(".btn__brand").addClass("active");
       $(".grid__item.brand").show();    
     }
     if (window.location.toString().includes("Web")) {
+      $(".grid__item").hide();
+      if ($(".btn").hasClass("active"))
+			$(".btn").removeClass("active");
       $(".btn__web").addClass("active");
       $(".grid__item.web").show();    
     }
     if (window.location.toString().includes("Photo")) {
+      $(".grid__item").hide();
+      if ($(".btn").hasClass("active"))
+			$(".btn").removeClass("active");
       $(".btn__photo").addClass("active");
       $(".grid__item.photo").show();    
     }

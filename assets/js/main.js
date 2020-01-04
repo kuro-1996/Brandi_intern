@@ -196,44 +196,14 @@ $(document).ready(function() {
 		$(".button").removeClass("active");
 		$(this).addClass("active");
 	});
-	// $(".button .btn__all").click(function() {
-	// 	$(".btn .btn__all").trigger("click");
-	// });
-	// $(".button .btn__brand").click(function() {
-	// 	$(".btn .btn__brand").trigger("click");
-	// });
-	// $(".button .btn__web").click(function() {
-	// 	$(".btn .btn__web").trigger("click");
-	// });
-	// $(".button .btn__logo").click(function() {
-	// 	$(".btn .btn__logo").trigger("click");
-	// });
-	// $(".button .btn__photo").click(function() {
-	// 	$(".btn .btn__photo").trigger("click");
-	// });
-	// $(".btn__all").click(function() {
-	// 	$(".btn__all").addClass("active");
-	// 	if ($(".btn__all").hasClass("check")) {
-	// 		$(".btn__all").removeClass("check");
-	// 		// $(".grid__item").show();
-	// 	}
-	// });
-	// $(".btn__brand").click(function() {
-	// 	$(".btn__brand").addClass("active");
-	// 	// $(".grid__item.brand").show();
-	// });
-	// $(".btn__web").click(function() {
-	// 	$(".btn__web").addClass("active");
-	// 	// $(".grid__item.web").show();
-	// });
-	// $(".btn__logo").click(function() {
-	// 	$(".btn__logo").addClass("active");
-	// 	// $(".grid__item.logo").show();
-	// });
-	// $(".btn__photo").click(function() {
-	// 	$(".btn__photo").addClass("active");
-	// 	// $(".grid__item.photo").show();
-	// });
+	
+	$(function() {
+		if (window.location.hash) {
+			$("html,body").animate({
+				scrollTop: $(window.location.hash).offset().top - 100
+			});
+		}
+	});
 });
 
 // if (window.location.hash && !window.location.toString().includes("sec")) {
@@ -242,15 +212,5 @@ $(document).ready(function() {
 // 	// 	scroll(0, 0);
 // 	// }, 0);
 // }
-
-$(function() {
-	if (window.location.hash) {
-		$("html,body").animate(
-			{
-				scrollTop: $(window.location.hash).offset().top -100
-			}
-		);
-	}
-});
 
 
