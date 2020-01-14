@@ -9,6 +9,7 @@ header {
     height: 48px;
   }
   &.change {
+    background-color: #1ea78d;
     .nav-bar {
       .nav-bar__menu {
         a {
@@ -169,11 +170,10 @@ header {
       list-style: none;
       @media #{$info-phone} {
         width: 0;
-        height: 600px;
         flex-flow: column;
         position: absolute;
         align-items: center;
-        padding: 20% 0 30% 0;
+        padding: 20% 0 200% 0;
         top: 0;
         right: 0;
         transition: all 300ms ease-in-out;
