@@ -59,7 +59,23 @@ $(document).ready(function() {
 		$(".grid__item.photo").show();
 	});
 	///////////////////////////////////
-	/*click menu to scroll to section*/
+	
+	
+	
+
+/*click menu to scroll to section*/
+	// $('.nav-link').each(function () {
+	// 	$(this).click(function () {
+	// 		var targer = window.location.hash;
+	// 		$("html,body").animate(
+	// 			{
+	// 				scrollTop: $(targer).offset().top - $(".nav-bar").height()
+	// 			},
+	// 			"slow"
+	// 		);	
+	// 	})
+	// })
+	
 	// $(".nav-link:first-child").click(function() {
 	// 	$("html,body").animate(
 	// 		{
@@ -72,7 +88,7 @@ $(document).ready(function() {
 	// $(".nav-link:nth-child(2)").click(function() {
 	// 	$("html,body").animate(
 	// 		{
-	// 			scrollTop: $(".features").offset().top - $(".nav-bar").height()
+	// 			scrollTop: $("#sec2").offset().top - $(".nav-bar").height()
 	// 		},
 	// 		"slow"
 	// 	);
@@ -204,13 +220,14 @@ $(document).ready(function() {
 			});
 		}
 	});
+	// if (window.location.hash && !window.location.toString().includes("sec")) {
+	// 	scroll(0, 0);
+	// 	setTimeout(function() {
+	// 		scroll(0, 0);
+	// 	}, 0);
+	// }
 });
 
-// if (window.location.hash && !window.location.toString().includes("sec")) {
-// 	scroll(0, 0);
-// 	// setTimeout(function() {
-// 	// 	scroll(0, 0);
-// 	// }, 0);
-// }
+
 
 
