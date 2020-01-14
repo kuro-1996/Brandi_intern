@@ -518,3 +518,9 @@
   display: -webkit-flex;
   display: flex;
 }
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
