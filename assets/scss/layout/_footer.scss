@@ -2,6 +2,18 @@ footer {
   background: #1ea78d;
   line-height: 1.9;
   padding: 100px 0 122px 0;
+  &.change{
+    .footer-wrap__comp,.footer-wrap__search{
+      opacity: 1;
+      @include animation(fadeInLeft);
+      animation-duration: 1s;
+    }
+    .footer-wrap__info,.footer-wrap__link{
+      opacity: 1;
+      @include animation(fadeInRight);
+      animation-duration: 1s;
+    }
+  }
   .footer-wrap {
     .col-12 {
       @media #{$info-phone} {
@@ -14,6 +26,7 @@ footer {
   }
 
   .footer-wrap__comp {
+    opacity: 0;
     @include font-size(13px);
     color: #ffffff;
     @media only screen and (max-width : 1199px){
@@ -39,6 +52,7 @@ footer {
     }
   }
   .footer-wrap__search {
+    opacity: 0;
     padding-top: 14px;
     @media only screen and (max-width : 1199px){
       padding-right: 0;
@@ -105,6 +119,7 @@ footer {
     }
   }
   .footer-wrap__link {
+    opacity: 0;
     padding-top: 14px;
     @media only screen and (max-width : 1199px){
       padding-right: 0;
@@ -155,6 +170,7 @@ footer {
     }
   }
   .footer-wrap__info {
+    opacity: 0;
     @include font-size(13px);
     padding: 65px 15px 0 27px;
     color: #062033;
