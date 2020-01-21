@@ -7878,18 +7878,6 @@ main {
   padding: 70px 0 51px 0;
 }
 
-.features.change .features-content__item.active {
-  opacity: 1;
-  -webkit-animation: bounceInLeft;
-  animation: bounceInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-.features .features-content__item.active {
-  opacity: 0;
-}
-
 .features .slick-dots {
   position: unset;
 }
@@ -7968,16 +7956,7 @@ main {
   padding-top: 92px;
 }
 
-.work.change .grid__item {
-  opacity: 1;
-  -webkit-animation: fadeInLeft;
-  animation: fadeInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
 .work .grid__item {
-  opacity: 0;
   height: 300px;
 }
 
@@ -8228,14 +8207,6 @@ main {
   position: relative;
 }
 
-.team.change .team-wrap__slick {
-  opacity: 1;
-  -webkit-animation: bounceInLeft;
-  animation: bounceInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
 @media screen and (max-width: 991px) {
   .team {
     padding-bottom: 94px;
@@ -8244,10 +8215,6 @@ main {
 
 .team .team-header {
   margin-bottom: 31px;
-}
-
-.team .team-wrap__slick {
-  opacity: 0;
 }
 
 .team .team-wrap__slick .slick-initialized .slick-slide {
@@ -8516,28 +8483,6 @@ main {
   padding: 93px 0 152px 0;
 }
 
-.funfact.change .funfact-content .content__info .info__item {
-  opacity: 1;
-}
-
-.funfact.change .funfact-content .content__info .info__item:first-child, .funfact.change .funfact-content .content__info .info__item:nth-child(2) {
-  -webkit-animation: bounceInLeft;
-  animation: bounceInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-.funfact.change .funfact-content .content__info .info__item:nth-child(3), .funfact.change .funfact-content .content__info .info__item:last-child {
-  -webkit-animation: bounceInRight;
-  animation: bounceInRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-.funfact .info__item {
-  opacity: 0;
-}
-
 @media screen and (max-width: 991px) {
   .funfact {
     padding-bottom: 76px;
@@ -8600,35 +8545,12 @@ main {
   padding: 93px 0 105px 0;
 }
 
-.discuss.change .discuss-content .discuss-content__wrap {
-  opacity: 1;
-}
-
-.discuss.change .discuss-content .discuss-content__wrap > p,
-.discuss.change .discuss-content .discuss-content__wrap .wrap__info {
-  -webkit-animation: fadeInLeft;
-  animation: fadeInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-.discuss.change .discuss-content .discuss-content__wrap .wrap__mess {
-  -webkit-animation: fadeInRight;
-  animation: fadeInRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
 .discuss .discuss-header {
   margin-bottom: 30px;
 }
 
 .discuss .discuss-content {
   position: relative;
-}
-
-.discuss .discuss-content .discuss-content__wrap {
-  opacity: 0;
 }
 
 .discuss .discuss-content .discuss-content__wrap > p {
@@ -9001,22 +8923,6 @@ footer {
   padding: 100px 0 122px 0;
 }
 
-footer.change .footer-wrap__comp, footer.change .footer-wrap__search {
-  opacity: 1;
-  -webkit-animation: fadeInLeft;
-  animation: fadeInLeft;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-footer.change .footer-wrap__info, footer.change .footer-wrap__link {
-  opacity: 1;
-  -webkit-animation: fadeInRight;
-  animation: fadeInRight;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
 @media only screen and (max-width: 767px) {
   footer .footer-wrap .col-12 {
     margin-bottom: 50px;
@@ -9027,7 +8933,6 @@ footer.change .footer-wrap__info, footer.change .footer-wrap__link {
 }
 
 footer .footer-wrap__comp {
-  opacity: 0;
   font-size: 13px;
   font-size: 0.8125rem;
   color: #ffffff;
@@ -9074,7 +8979,6 @@ footer .footer-wrap__comp img {
 }
 
 footer .footer-wrap__search {
-  opacity: 0;
   padding-top: 14px;
 }
 
@@ -9186,7 +9090,6 @@ footer .footer-wrap__search .search__area .fas:hover {
 }
 
 footer .footer-wrap__link {
-  opacity: 0;
   padding-top: 14px;
 }
 
@@ -9278,7 +9181,6 @@ footer .footer-wrap__link .col__left {
 }
 
 footer .footer-wrap__info {
-  opacity: 0;
   font-size: 13px;
   font-size: 0.8125rem;
   padding: 65px 15px 0 27px;

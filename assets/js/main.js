@@ -59,110 +59,38 @@ $(document).ready(function() {
 		$(".grid__item.photo").show();
 	});
 	///////////////////////////////////
-
-	/*click menu to scroll to section*/
-	// $('.nav-link').each(function () {
-	// 	$(this).click(function () {
-	// 		var targer = window.location.hash;
-	// 		$("html,body").animate(
-	// 			{
-	// 				scrollTop: $(targer).offset().top - $(".nav-bar").height()
-	// 			},
-	// 			"slow"
-	// 		);
-	// 	})
-	// })
-
-	// $(".nav-link:first-child").click(function() {
-	// 	$("html,body").animate(
-	// 		{
-	// 			scrollTop: 0
-	// 		},
-	// 		"slow"
-	// 	);
-	// });
-
-	// $(".nav-link:nth-child(2)").click(function() {
-	// 	$("html,body").animate(
-	// 		{
-	// 			scrollTop: $("#sec2").offset().top - $(".nav-bar").height()
-	// 		},
-	// 		"slow"
-	// 	);
-	// });
-
-	// $(".nav-link:nth-child(3)").click(function() {
-	// 	$("html,body").animate(
-	// 		{
-	// 			scrollTop: $(".work").offset().top - $(".nav-bar").height()
-	// 		},
-	// 		"slow"
-	// 	);
-	// });
-
-	// $(".nav-link:nth-child(4)").click(function() {
-	// 	$("html,body").animate(
-	// 		{
-	// 			scrollTop: $(".team").offset().top - $(".nav-bar").height()
-	// 		},
-	// 		"slow"
-	// 	);
-	// });
-
-	// $(".nav-link:last-child").click(function() {
-	// 	$("html,body").animate(
-	// 		{
-	// 			scrollTop: $(".discuss").offset().top - $(".nav-bar").height()
-	// 		},
-	// 		"slow"
-	// 	);
-	// });
-	//////////////////////////////////////
 	/*scroll to section to add animation*/
 	a = 0;
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > $(".banner").height() - $("header").height()) {
+		if ($(this).scrollTop() > $(".banner").height() - $("header").height()) 
 			$("header").addClass("change");
-		}
-		if ($(this).scrollTop() <= $(".banner").height() - $("header").height()) {
+		if ($(this).scrollTop() <= $(".banner").height() - $("header").height())
 			$("header").removeClass("change");
-		}
-		var arr = [$(".features"), $(".work"), $(".team"), $(".discuss")];
-		arr.forEach(el => {
-			if ($(this).scrollTop() > el.offset().top - 300) {
-				el.addClass("change");
-			}
-		});
-
-		/* add animation and counter when scroll to funfact section  */
 		if (a == 0 && $(this).scrollTop() > $(".funfact").offset().top - 500) {
-			$(".funfact").addClass("change");
-			$(".item__counter").each(function() {
-				var $this = $(this),
-					countTo = $this.attr("data-count");
-				$({
-					countNum: $this.text()
-				}).animate(
-					{
-						countNum: countTo
-					},
-					{
-						duration: 8000,
-						easing: "swing",
-						step: function() {
-							$this.text(Math.floor(this.countNum));
+				/* add animation and counter when scroll to funfact section  */
+				$(".item__counter").each(function() {
+					var $this = $(this),
+						countTo = $this.attr("data-count");
+					$({
+						countNum: $this.text()
+					}).animate(
+						{
+							countNum: countTo
 						},
-						complete: function() {
-							$this.text(this.countNum);
+						{
+							duration: 8000,
+							easing: "swing",
+							step: function() {
+								$this.text(Math.floor(this.countNum));
+							},
+							complete: function() {
+								$this.text(this.countNum);
+							}
 						}
-					}
-				);
-			});
-			a = 1;
-		}
-		if ($(this).scrollTop() > $("footer").offset().top - 500) {
-			$("footer").addClass("change");
-		}
+					);
+				});
+				a = 1;
+			}
 	});
 
 	////////////////

@@ -4,16 +4,6 @@ main {
 .features {
 	background: #f4f7f9;
 	padding: 70px 0 51px 0;
-	&.change {
-		.features-content__item.active {
-			opacity: 1;
-			@include animation(bounceInLeft);
-			animation-duration: 1s;
-		}
-	}
-	.features-content__item.active {
-		opacity: 0;
-	}
 	.slick-dots {
 		position: unset;
 		li {
@@ -72,15 +62,7 @@ main {
 /*****features*********/
 .work {
 	padding-top: 92px;
-	&.change {
-		.grid__item {
-			opacity: 1;
-			@include animation(fadeInLeft);
-			animation-duration: 1s;
-		}
-	}
 	.grid__item {
-		opacity: 0;
 		height: 300px;
 	}
 	.work-content__gallery,
@@ -252,13 +234,6 @@ main {
 .team {
 	padding: 94px 0 117px 0;
 	position: relative;
-	&.change {
-		.team-wrap__slick {
-			opacity: 1;
-			@include animation(bounceInLeft);
-			animation-duration: 1s;
-		}
-	}
 	@media screen and (max-width: 991px) {
 		padding-bottom: 94px;
 	}
@@ -267,7 +242,6 @@ main {
 		margin-bottom: 31px;
 	}
 	.team-wrap__slick {
-		opacity: 0;
 		.slick-initialized .slick-slide {
 			display: flex;
 		}
@@ -461,28 +435,6 @@ main {
 	background: url("../img/ff-bg.jpg");
 	background-size: cover;
 	padding: 93px 0 152px 0;
-	&.change {
-		.funfact-content {
-			.content__info {
-				.info__item {
-					opacity: 1;
-					&:first-child,
-					&:nth-child(2) {
-						@include animation(bounceInLeft);
-						animation-duration: 1s;
-					}
-					&:nth-child(3),
-					&:last-child {
-						@include animation(bounceInRight);
-						animation-duration: 1s;
-					}
-				}
-			}
-		}
-	}
-	.info__item {
-		opacity: 0;
-	}
 	@media screen and (max-width: 991px) {
 		padding-bottom: 76px;
 	}
@@ -535,30 +487,12 @@ main {
 /********funfact********/
 .discuss {
 	padding: 93px 0 105px 0;
-	&.change {
-		.discuss-content {
-			.discuss-content__wrap {
-				opacity: 1;
-				& > p,
-				.wrap__info {
-					@include animation(fadeInLeft);
-					animation-duration: 1s;
-				}
-				.wrap__mess {
-					@include animation(fadeInRight);
-					animation-duration: 1s;
-				}
-			}
-		}
-	}
-
 	.discuss-header {
 		margin-bottom: 30px;
 	}
 	.discuss-content {
 		position: relative;
 		.discuss-content__wrap {
-			opacity: 0;
 			& > p {
 				font-weight: 600;
 				@include font-size(18px);
